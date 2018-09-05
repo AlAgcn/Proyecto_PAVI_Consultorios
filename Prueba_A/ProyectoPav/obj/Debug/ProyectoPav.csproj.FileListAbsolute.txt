@@ -1,0 +1,10 @@
+D:\Visual Studio\ProyectoPav\ProyectoPav\bin\Debug\ProyectoPav.exe.config
+D:\Visual Studio\ProyectoPav\ProyectoPav\bin\Debug\ProyectoPav.exe
+D:\Visual Studio\ProyectoPav\ProyectoPav\bin\Debug\ProyectoPav.pdb
+D:\Visual Studio\ProyectoPav\ProyectoPav\obj\Debug\ProyectoPav.csprojResolveAssemblyReference.cache
+D:\Visual Studio\ProyectoPav\ProyectoPav\obj\Debug\ProyectoPav.frmLogIn.resources
+D:\Visual Studio\ProyectoPav\ProyectoPav\obj\Debug\ProyectoPav.Properties.Resources.resources
+D:\Visual Studio\ProyectoPav\ProyectoPav\obj\Debug\ProyectoPav.csproj.GenerateResource.Cache
+D:\Visual Studio\ProyectoPav\ProyectoPav\obj\Debug\ProyectoPav.exe
+D:\Visual Studio\ProyectoPav\ProyectoPav\obj\Debug\ProyectoPav.pdb
+D:\Visual Studio\ProyectoPav\ProyectoPav\obj\Debug\ProyectoPav.frmPrincipal.resources
