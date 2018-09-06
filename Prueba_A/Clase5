@@ -1,0 +1,91 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace MENUPRINCIPAL
+{
+    public partial class frmUsuarios : Form
+    {
+        //Instanciamos y copiamos la cadena
+        BDHelper oDatos = new BDHelper("Data Source=maquis;Initial Catalog=BugsHisto;User ID=avisuales1;Password=avisuales1");
+        bool nuevo = false;
+
+        public frmUsuarios()
+        {
+            InitializeComponent();
+        }
+
+        private void frmUsuarios_Load(object sender, EventArgs e)
+        { 
+            //carga de datos de combo perfil y lista usuarios
+            DataTable tabla = oDatos.consultarTabla("perfiles");
+            cmbPerfil.DataSource = tabla;
+            cmbPerfil.ValueMember = tabla.Columns[0].ColumnName;
+            cmbPerfil.DisplayMember = tabla.Columns[1].ColumnName;
+
+            tabla = oDatos.consultarTabla("users");
+            lstUsuarios.DataSource = tabla;
+            lstUsuarios.ValueMember = tabla.Columns[0].ColumnName;
+            lstUsuarios.DisplayMember = "n_usuario";
+        }
+
+        private void comboBox6_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            nuevo = true;
+            //habilitar campos txt y deshabilitar botones...limpiar txt...dar foco en secuencia...
+            txtNombre.Focus();
+
+        }
+
+        private void txtEditar_Click(object sender, EventArgs e)
+        {
+            //habilitar campos txt y deshabilitar botones
+            txtNombre.Focus();
+        }
+
+        private void txtGrabar_Click(object sender, EventArgs e)
+        {
+            //validar()
+            if(nuevo)
+            {
+                //insert
+                string sql = "insert into users (n_usuario,password,email,id:perfil,estado) values("
+                +"'" + txtNombre.Text + "','" + txtContrasena.Text + "'," + txtEmail.Text + "'," + cmbPerfil.SelectedValue + ",'S')";
+                oDatos.actualizarBD(sql);
+            }
+         
+            else
+            {
+                //update
+            nuevo = false;
+            //actualizarLista(),habilitar botones, deshabilitar campos...
+            }
+
+        }
+    }
+}
+------------------------------------------------------------------------------------------------------------------------------------
+        public void actualizarBD(string sql)
+        {
+            conectar();
+            comando.CommandText = sql;
+            comando.ExecuteNonQuery();
+            desconectar();
+        }
+        
