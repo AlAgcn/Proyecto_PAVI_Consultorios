@@ -59,25 +59,5 @@ namespace ProyectoPav.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _1240136_1386437311585620_252135150_n {
-            get {
-                object obj = ResourceManager.GetObject("1240136_1386437311585620_252135150_n", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _1385179_10201066999173231_573871590_n {
-            get {
-                object obj = ResourceManager.GetObject("1385179_10201066999173231_573871590_n", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
     }
 }

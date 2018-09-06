@@ -8,3 +8,14 @@ D:\Visual Studio\ProyectoPav\ProyectoPav\obj\Debug\ProyectoPav.csproj.GenerateRe
 D:\Visual Studio\ProyectoPav\ProyectoPav\obj\Debug\ProyectoPav.exe
 D:\Visual Studio\ProyectoPav\ProyectoPav\obj\Debug\ProyectoPav.pdb
 D:\Visual Studio\ProyectoPav\ProyectoPav\obj\Debug\ProyectoPav.frmPrincipal.resources
+D:\Mis Documentos\Ali trabajos\Proyecto PAVI\Proyecto_PAVI_Consultorios-master\Prueba_A\ProyectoPav\bin\Debug\ProyectoPav.exe.config
+D:\Mis Documentos\Ali trabajos\Proyecto PAVI\Proyecto_PAVI_Consultorios-master\Prueba_A\ProyectoPav\obj\Debug\ProyectoPav.exe
+D:\Mis Documentos\Ali trabajos\Proyecto PAVI\Proyecto_PAVI_Consultorios-master\Prueba_A\ProyectoPav\obj\Debug\ProyectoPav.pdb
+D:\Mis Documentos\Ali trabajos\Proyecto PAVI\Proyecto_PAVI_Consultorios-master\Prueba_A\ProyectoPav\obj\Debug\ProyectoPav.csprojResolveAssemblyReference.cache
+D:\Mis Documentos\Ali trabajos\Proyecto PAVI\Proyecto_PAVI_Consultorios-master\Prueba_A\ProyectoPav\obj\Debug\ProyectoPav.frmLogIn.resources
+D:\Mis Documentos\Ali trabajos\Proyecto PAVI\Proyecto_PAVI_Consultorios-master\Prueba_A\ProyectoPav\obj\Debug\ProyectoPav.frmPrincipal.resources
+D:\Mis Documentos\Ali trabajos\Proyecto PAVI\Proyecto_PAVI_Consultorios-master\Prueba_A\ProyectoPav\obj\Debug\ProyectoPav.csproj.GenerateResource.Cache
+D:\Mis Documentos\Ali trabajos\Proyecto PAVI\Proyecto_PAVI_Consultorios-master\Prueba_A\ProyectoPav\obj\Debug\ProyectoPav.Properties.Resources.resources
+D:\Mis Documentos\Ali trabajos\Proyecto PAVI\Proyecto_PAVI_Consultorios-master\Prueba_A\ProyectoPav\bin\Debug\ProyectoPav.exe
+D:\Mis Documentos\Ali trabajos\Proyecto PAVI\Proyecto_PAVI_Consultorios-master\Prueba_A\ProyectoPav\bin\Debug\ProyectoPav.pdb
+D:\Mis Documentos\Ali trabajos\Proyecto PAVI\Proyecto_PAVI_Consultorios-master\Prueba_A\ProyectoPav\obj\Debug\ProyectoPav.frmUsuarios.resources
