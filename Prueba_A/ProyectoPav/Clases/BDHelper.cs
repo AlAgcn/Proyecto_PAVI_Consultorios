@@ -58,7 +58,7 @@ namespace ProyectoPav
             desconectar();
             return tabla;
         }
-        public DataTable consultaTabla (String buscar)
+        public DataTable consultaTabla_parametros(String buscar)
         {
             DataTable tablar = new DataTable();
             conectar();
