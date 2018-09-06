@@ -1,0 +1,60 @@
+CREATE table Users
+(
+id INT IDENTITY,
+Usuario nchar(15) not null,
+Password nchar(10) not null
+)
+GO
+
+insert into Users (Usuario, Password) values ('Ali', '123abc');
+insert into Users (Usuario, Password) values ('Fran', 'charrua');
+insert into Users (Usuario, Password) values ('Nahuel', 'Chuchas');
+insert into Users (Usuario, Password) values ('ADMIN', '12345');
+insert into Users (Usuario, Password) values ('Dr.Pie', 'ibuprofeno');
+insert into Users (Usuario, Password) values ('Medico1', 'uno2tres');
+GO
+
+CREATE table Historias_Clinicas
+(
+cod INT,
+Nombre nchar(10) not null,
+Apellido nchar(15) not null,
+dni INT not null
+)
+GO
+
+CREATE table Atenciones_Medicas
+(
+id INT IDENTITY,
+Historia_Clinica int,
+Motivo_Consulta text not null,
+Revision text,
+Diagnostico text not null,
+Plan_Terapeutico text,
+Observaciones text,
+Fecha date
+)
+GO
+
+CREATE table Medicos
+(
+id INT IDENTITY,
+Nombre nchar(15) not null,
+Apellido nchar(15) not null,
+Fecha_Ingreso date not null,
+Fecha_Egreso date,
+)
+GO
+CREATE table Pacientes
+(
+n_HistoriaClinica INT IDENTITY (0001,1),
+Nombre nchar(15) not null,
+Apellido nchar(15) not null,
+dni bigint not null,
+Fecha_Nacimiento date not null,
+Obra_Social varchar(20),
+n_Afiliado int,
+Domicilio text,
+Telefono int
+)
+GO
