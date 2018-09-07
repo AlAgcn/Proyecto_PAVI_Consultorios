@@ -12,9 +12,22 @@ namespace ProyectoPav
 {
     public partial class frmUsuarios : Form
     {
+        BDHelper oDatos = new BDHelper();
         public frmUsuarios()
         {
             InitializeComponent();
+        }
+
+        private void cargarLista (ListBox lista)
+        {
+            lista.DataSource = oDatos.cargarTabla("Users");
+            lista.DisplayMember = "Usuario";
+            lista.ValueMember = "id";
+        }
+
+        private void frmUsuarios_Load(object sender, EventArgs e)
+        {
+            cargarLista(lstUsuario);
         }
     }
 }
