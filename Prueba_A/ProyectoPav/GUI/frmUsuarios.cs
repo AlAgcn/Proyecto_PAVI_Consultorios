@@ -47,10 +47,10 @@ namespace ProyectoPav
 
             String str_sql = "INSERT INTO Users (Usuario, Password, Perfil) values('"
                             + txtUsuario.Text + "', " + txtPassword + "', " + cmbPerfil.Text + "'";
-            if (new BDHelper().consultaSQL(str_sql))
-            {
-                MessageBox.Show("Usuario agregado con Extio", "Nuevo Usuario", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
-            }
+            new BDHelper().consultaSQL(str_sql);
+            //{
+            //    MessageBox.Show("Usuario agregado con Extio", "Nuevo Usuario", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
+            //}
 
             lstUsuario.ResetText();
             new frmPrincipal().cargarLista(lstUsuario, "Users", "Usuario", "id");

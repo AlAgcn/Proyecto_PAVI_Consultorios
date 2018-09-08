@@ -55,7 +55,7 @@ namespace ProyectoPav
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            Close();
+            this.Close();
         }
 
         private void frmLogIn_FormClosing(object sender, FormClosingEventArgs e)
@@ -63,7 +63,11 @@ namespace ProyectoPav
             if (salir)
             {
                 if (MessageBox.Show("¿Desea salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.No)
-                { e.Cancel = true; }
+                { e.Cancel = true;
+                txtUsuarios.Clear();
+                txtPasswords.Clear();
+                txtUsuarios.Focus();
+                }
                 else
                 {
                    Environment.Exit(0);
