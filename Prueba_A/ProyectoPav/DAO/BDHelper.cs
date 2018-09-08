@@ -69,22 +69,23 @@ namespace ProyectoPav
             return tablar;
         }
 
-        public void consultaSQL(string sqlComand)
+        public bool consultaSQL(string sqlComand)
         {
-            try
             {
                 conectar();
                 comando.CommandText = sqlComand;
-                comando.ExecuteNonQuery();
-            }
-            catch (SqlException)
-            {
-                
-                throw;
-            }
-            finally
-            {
-                desconectar();
+
+                if (comando.ExecuteNonQuery() > 0)
+                {
+                    desconectar();
+                    return true;
+                }
+                else
+                {
+                    desconectar();
+                    return false;
+                }
+
             }
         }
     }
