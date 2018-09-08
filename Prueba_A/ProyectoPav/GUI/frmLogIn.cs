@@ -11,7 +11,7 @@ namespace ProyectoPav
 {
     public partial class frmLogIn : Form
     {
-        private BDHelper oDatos = new BDHelper();
+        private Boolean salir = true;
         public frmLogIn()
         {
             InitializeComponent();
@@ -19,7 +19,6 @@ namespace ProyectoPav
 
         private void frmLogIn_Load(object sender, EventArgs e)
         {
-
         }
 
         private void btnIniciarSesion_Click(object sender, EventArgs e)
@@ -33,17 +32,21 @@ namespace ProyectoPav
             }
             else
             {
-                oDatos= new BDHelper();
                 DataTable tabla = new DataTable();
                 String comand = "SELECT Usuario,Password from Users WHERE Usuario='" + txtUsuarios.Text + "' and Password ='" + txtPasswords.Text + "'";
-                tabla = oDatos.consultaTabla_parametros(comand);
+                tabla = new BDHelper().consultaTabla_parametros(comand);
                 if (tabla.Rows.Count == 0)
                 {
+                    txtUsuarios.Clear();
+                    txtPasswords.Clear();
                     MessageBox.Show("Usuario y/o contraseña incorrecto", "Inicio Fallido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtUsuarios.Focus();
+
                 }
                 else
                 {
                     MessageBox.Show("Bienvenido "+ txtUsuarios.Text, "Inicio Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    salir = false;
                     this.Close();
                 }
             }
@@ -52,8 +55,22 @@ namespace ProyectoPav
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Desea salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
-                Environment.Exit(0);
+            Close();
+        }
+
+        private void frmLogIn_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (salir)
+            {
+                if (MessageBox.Show("¿Desea salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.No)
+                { e.Cancel = true; }
+                else
+                {
+                   Environment.Exit(0);
+                }
+            }
+            else
+            { e.Cancel = false; }
         }
 
     }

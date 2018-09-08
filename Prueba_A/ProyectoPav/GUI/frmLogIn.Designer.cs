@@ -41,7 +41,7 @@
             this.txtUsuarios.Location = new System.Drawing.Point(208, 38);
             this.txtUsuarios.Name = "txtUsuarios";
             this.txtUsuarios.Size = new System.Drawing.Size(180, 20);
-            this.txtUsuarios.TabIndex = 0;
+            this.txtUsuarios.TabIndex = 1;
             this.txtUsuarios.Text = "Ingresar Usuario";
             // 
             // txtPasswords
@@ -53,7 +53,7 @@
             this.txtPasswords.Name = "txtPasswords";
             this.txtPasswords.PasswordChar = '*';
             this.txtPasswords.Size = new System.Drawing.Size(180, 20);
-            this.txtPasswords.TabIndex = 1;
+            this.txtPasswords.TabIndex = 3;
             // 
             // lblUsuarios
             // 
@@ -63,7 +63,7 @@
             this.lblUsuarios.Location = new System.Drawing.Point(25, 38);
             this.lblUsuarios.Name = "lblUsuarios";
             this.lblUsuarios.Size = new System.Drawing.Size(64, 20);
-            this.lblUsuarios.TabIndex = 2;
+            this.lblUsuarios.TabIndex = 0;
             this.lblUsuarios.Text = "Usuario";
             // 
             // lblPasswords
@@ -73,7 +73,7 @@
             this.lblPasswords.Location = new System.Drawing.Point(25, 95);
             this.lblPasswords.Name = "lblPasswords";
             this.lblPasswords.Size = new System.Drawing.Size(92, 20);
-            this.lblPasswords.TabIndex = 3;
+            this.lblPasswords.TabIndex = 2;
             this.lblPasswords.Text = "Contraseña";
             // 
             // btnIniciarSesion
@@ -111,7 +111,7 @@
             this.Name = "frmLogIn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Iniciar Sesion";
-            //this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmLogIn_FormClosing);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmLogIn_FormClosing);
             this.Load += new System.EventHandler(this.frmLogIn_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
