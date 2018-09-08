@@ -1,17 +1,40 @@
+CREATE table Perfiles
+(
+id_perfil INT IDENTITY (1,1) not null,
+n_perfil varchar(20) not null,
+CONSTRAINT PK_Perfiles PRIMARY KEY CLUSTERED (id_perfil ASC) with (
+PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+
+GO
+SET IDENTITY_INSERT Perfiles ON
+INSERT Perfiles (id_perfil, n_perfil) values (1,'Administrador')
+INSERT Perfiles (id_perfil, n_perfil) values (2,'Medico')
+INSERT Perfiles (id_perfil, n_perfil) values (3,'Secretaria')
+SET IDENTITY_INSERT Perfiles OFF
+GO
+
+
 CREATE table Users
 (
 id INT IDENTITY,
 Usuario nchar(15) not null,
-Password nchar(10) not null
+Password nchar(10) not null,
+id_perfil int not null,
+Estado varchar(1) not null,
 )
 GO
 
-insert into Users (Usuario, Password) values ('Ali', '123abc');
-insert into Users (Usuario, Password) values ('Fran', 'charrua');
-insert into Users (Usuario, Password) values ('Nahuel', 'Chuchas');
-insert into Users (Usuario, Password) values ('ADMIN', '12345');
-insert into Users (Usuario, Password) values ('Dr.Pie', 'ibuprofeno');
-insert into Users (Usuario, Password) values ('Medico1', 'uno2tres');
+insert into Users (Usuario, Password, id_perfil, Estado) values ('Ali', '123abc', 1, 'S')
+insert into Users (Usuario, Password, id_perfil, Estado) values ('Fran', 'charrua', 3, 'S')
+insert into Users (Usuario, Password, id_perfil, Estado) values ('Nahuel', 'Chuchas', 2, 'S')
+insert into Users (Usuario, Password, id_perfil, Estado) values ('ADMIN', '12345', 1, 'N')
+insert into Users (Usuario, Password, id_perfil, Estado) values ('Dr.Pie', 'ibuprofeno', 2, 'N')
+insert into Users (Usuario, Password, id_perfil, Estado) values ('Medico1', 'uno2tres', 2, 'S')
 GO
 
 CREATE table Historias_Clinicas
