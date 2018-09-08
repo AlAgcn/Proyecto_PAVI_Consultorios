@@ -45,10 +45,10 @@ namespace ProyectoPav
             btnModificar.Enabled = false;
             btnNuevo.Enabled = false;
 
-            String str_sql = "INSERT INTO Users (Usuario, Password, id_perfil) values('"
+            string str_sql = "INSERT INTO Users (Usuario, Password, id_perfil) values('"
                             + txtUsuario.Text + "', '" + txtPassword + "', '" + cmbPerfil.Text + "')";
 
-            if (new BDHelper().consultaSQL(str_sql))
+            if (new BDHelper().consultaSQL(str_sql) > 0)
             {
                 MessageBox.Show("Usuario agregado con Extio", "Nuevo Usuario", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
             }
