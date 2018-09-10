@@ -41,5 +41,13 @@ namespace ProyectoPav
             open.ShowDialog();
         }
 
+        private void frmPrincipal_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("¿Desea salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.No)
+                e.Cancel = true;
+            else
+                e.Cancel = false;
+        }
+
     }
 }

@@ -44,18 +44,36 @@ namespace ProyectoPav
             habilitarCampos();
             btnModificar.Enabled = false;
             btnNuevo.Enabled = false;
+            new frmPrincipal().llenarCombo(cmbPerfil, "Perfiles", "n_perfil", "id_perfil");
+            
 
-            string str_sql = "INSERT INTO Users (Usuario, Password, id_perfil) values('"
-                            + txtUsuario.Text + "', '" + txtPassword + "', '" + cmbPerfil.Text + "')";
+        }
 
-            if (new BDHelper().consultaSQL(str_sql) > 0)
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            if (new BDHelper().siExiste("Users", "Usuario", txtUsuario.Text))
             {
-                MessageBox.Show("Usuario agregado con Extio", "Nuevo Usuario", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
+                MessageBox.Show("El usuario ingresado ya existe, por favor ingrese uno distinto", "Usuario Existente", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtUsuario.Clear();
+                txtPassword.Clear();
+                txtConfirmarPassword.Clear();
+                txtUsuario.Focus();
             }
+            else
+            {
+                string str_sql = "INSERT INTO Users (Usuario, Password, id_perfil, Estado) values('"
+                                + txtUsuario.Text + "', '" + txtPassword.Text + "', '" + cmbPerfil.SelectedValue.ToString() + "','S')";
 
-            lstUsuario.ResetText();
-            new frmPrincipal().cargarLista(lstUsuario, "Users", "Usuario", "id");
+                if (new BDHelper().consultaSQL(str_sql) > 0)
+                {
+                    MessageBox.Show("Usuario agregado con Extio", "Nuevo Usuario", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
+                }
 
+                lstUsuario.ResetText();
+                new frmPrincipal().cargarLista(lstUsuario, "Users", "Usuario", "id");
+                deshabilitarCampos();
+                btnNuevo.Enabled = true;
+            }
         }
 
 

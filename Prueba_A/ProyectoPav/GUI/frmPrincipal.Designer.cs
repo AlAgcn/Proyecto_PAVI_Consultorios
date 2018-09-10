@@ -91,6 +91,7 @@
             this.Controls.Add(this.btnPacientes);
             this.Name = "frmPrincipal";
             this.Text = "frmPrincipal";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmPrincipal_FormClosing);
             this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.ResumeLayout(false);
 

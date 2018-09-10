@@ -80,5 +80,17 @@ namespace ProyectoPav
 
             }
         }
+
+        public bool siExiste(string nombreTabla, string columna, string nuevo)
+        {
+            DataTable existe = new DataTable();
+            conectar();
+            comando.CommandText = "SELECT " + columna + " FROM " + nombreTabla + " WHERE " + columna + "='" + nuevo + "'";
+            existe.Load(comando.ExecuteReader());
+            if (existe.Rows.Count > 0)
+                return true;
+            else
+                return false;
+        }
     }
 }
