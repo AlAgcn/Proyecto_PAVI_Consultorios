@@ -49,6 +49,15 @@ namespace ProyectoPav
         {
             conexion.Close();
         }
+        public DateTable consulta_sql(String sqlComando)
+        {
+            DataTable tablin =new DataTable();
+            conectar();
+            comando.CommandText=sqlComando;
+            tablin.load(comando.ExecuteReader());
+            desconectar();
+            return tabla;
+         }   
         public DataTable cargarTabla(String nombreTabla)
         {
             DataTable tabla = new DataTable();
