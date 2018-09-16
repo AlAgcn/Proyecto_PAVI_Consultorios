@@ -24,7 +24,7 @@ namespace ProyectoPav
         {
             string str_sql= "Select * from Users where Usuario='"+name+"', Password='"+password+"'";
             DataTable tablin = new DataTable();
-            tablin = ayudin.consulta_oldb(str_sql);
+            tablin = ayudin.consulta_sql(str_sql);
             if (tablin.Rows.Count >0)
             {
                 Usuario usu = new Usuario();
