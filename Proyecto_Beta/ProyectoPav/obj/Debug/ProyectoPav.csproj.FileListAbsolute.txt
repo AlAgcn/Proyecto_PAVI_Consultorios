@@ -1,0 +1,49 @@
+D:\Visual Studio\ProyectoPav\ProyectoPav\bin\Debug\ProyectoPav.exe.config
+D:\Visual Studio\ProyectoPav\ProyectoPav\bin\Debug\ProyectoPav.exe
+D:\Visual Studio\ProyectoPav\ProyectoPav\bin\Debug\ProyectoPav.pdb
+D:\Visual Studio\ProyectoPav\ProyectoPav\obj\Debug\ProyectoPav.csprojResolveAssemblyReference.cache
+D:\Visual Studio\ProyectoPav\ProyectoPav\obj\Debug\ProyectoPav.frmLogIn.resources
+D:\Visual Studio\ProyectoPav\ProyectoPav\obj\Debug\ProyectoPav.Properties.Resources.resources
+D:\Visual Studio\ProyectoPav\ProyectoPav\obj\Debug\ProyectoPav.csproj.GenerateResource.Cache
+D:\Visual Studio\ProyectoPav\ProyectoPav\obj\Debug\ProyectoPav.exe
+D:\Visual Studio\ProyectoPav\ProyectoPav\obj\Debug\ProyectoPav.pdb
+D:\Visual Studio\ProyectoPav\ProyectoPav\obj\Debug\ProyectoPav.frmPrincipal.resources
+D:\Mis Documentos\Ali trabajos\Proyecto PAVI\Proyecto_PAVI_Consultorios-master\Prueba_A\ProyectoPav\bin\Debug\ProyectoPav.exe.config
+D:\Mis Documentos\Ali trabajos\Proyecto PAVI\Proyecto_PAVI_Consultorios-master\Prueba_A\ProyectoPav\obj\Debug\ProyectoPav.exe
+D:\Mis Documentos\Ali trabajos\Proyecto PAVI\Proyecto_PAVI_Consultorios-master\Prueba_A\ProyectoPav\obj\Debug\ProyectoPav.pdb
+D:\Mis Documentos\Ali trabajos\Proyecto PAVI\Proyecto_PAVI_Consultorios-master\Prueba_A\ProyectoPav\obj\Debug\ProyectoPav.csprojResolveAssemblyReference.cache
+D:\Mis Documentos\Ali trabajos\Proyecto PAVI\Proyecto_PAVI_Consultorios-master\Prueba_A\ProyectoPav\obj\Debug\ProyectoPav.frmLogIn.resources
+D:\Mis Documentos\Ali trabajos\Proyecto PAVI\Proyecto_PAVI_Consultorios-master\Prueba_A\ProyectoPav\obj\Debug\ProyectoPav.frmPrincipal.resources
+D:\Mis Documentos\Ali trabajos\Proyecto PAVI\Proyecto_PAVI_Consultorios-master\Prueba_A\ProyectoPav\obj\Debug\ProyectoPav.csproj.GenerateResource.Cache
+D:\Mis Documentos\Ali trabajos\Proyecto PAVI\Proyecto_PAVI_Consultorios-master\Prueba_A\ProyectoPav\obj\Debug\ProyectoPav.Properties.Resources.resources
+D:\Mis Documentos\Ali trabajos\Proyecto PAVI\Proyecto_PAVI_Consultorios-master\Prueba_A\ProyectoPav\bin\Debug\ProyectoPav.exe
+D:\Mis Documentos\Ali trabajos\Proyecto PAVI\Proyecto_PAVI_Consultorios-master\Prueba_A\ProyectoPav\bin\Debug\ProyectoPav.pdb
+D:\Mis Documentos\Ali trabajos\Proyecto PAVI\Proyecto_PAVI_Consultorios-master\Prueba_A\ProyectoPav\obj\Debug\ProyectoPav.frmUsuarios.resources
+C:\Proyectos_Git\Proyecto_PAVI_Consultorios\Prueba_A\ProyectoPav\bin\Debug\ProyectoPav.exe.config
+C:\Proyectos_Git\Proyecto_PAVI_Consultorios\Prueba_A\ProyectoPav\obj\Debug\ProyectoPav.exe
+C:\Proyectos_Git\Proyecto_PAVI_Consultorios\Prueba_A\ProyectoPav\obj\Debug\ProyectoPav.pdb
+C:\Proyectos_Git\Proyecto_PAVI_Consultorios\Prueba_A\ProyectoPav\bin\Debug\ProyectoPav.exe
+C:\Proyectos_Git\Proyecto_PAVI_Consultorios\Prueba_A\ProyectoPav\bin\Debug\ProyectoPav.pdb
+C:\Proyectos_Git\Proyecto_PAVI_Consultorios\Prueba_A\ProyectoPav\obj\Debug\ProyectoPav.csprojResolveAssemblyReference.cache
+C:\Proyectos_Git\Proyecto_PAVI_Consultorios\Prueba_A\ProyectoPav\obj\Debug\ProyectoPav.frmLogIn.resources
+C:\Proyectos_Git\Proyecto_PAVI_Consultorios\Prueba_A\ProyectoPav\obj\Debug\ProyectoPav.frmPrincipal.resources
+C:\Proyectos_Git\Proyecto_PAVI_Consultorios\Prueba_A\ProyectoPav\obj\Debug\ProyectoPav.frmUsuarios.resources
+C:\Proyectos_Git\Proyecto_PAVI_Consultorios\Prueba_A\ProyectoPav\obj\Debug\ProyectoPav.Properties.Resources.resources
+C:\Proyectos_Git\Proyecto_PAVI_Consultorios\Prueba_A\ProyectoPav\obj\Debug\ProyectoPav.csproj.GenerateResource.Cache
+D:\Proyecto_PAVI_Consultorios-master\Prueba_A\ProyectoPav\bin\Debug\ProyectoPav.exe.config
+D:\Proyecto_PAVI_Consultorios-master\Prueba_A\ProyectoPav\obj\Debug\ProyectoPav.exe
+D:\Proyecto_PAVI_Consultorios-master\Prueba_A\ProyectoPav\obj\Debug\ProyectoPav.pdb
+D:\Proyecto_PAVI_Consultorios-master\Prueba_A\ProyectoPav\bin\Debug\ProyectoPav.exe
+D:\Proyecto_PAVI_Consultorios-master\Prueba_A\ProyectoPav\bin\Debug\ProyectoPav.pdb
+D:\Proyecto_PAVI_Consultorios-master\Prueba_A\ProyectoPav\obj\Debug\ProyectoPav.csprojResolveAssemblyReference.cache
+D:\Proyecto_PAVI_Consultorios-master\Prueba_A\ProyectoPav\obj\Debug\ProyectoPav.frmLogIn.resources
+D:\Proyecto_PAVI_Consultorios-master\Prueba_A\ProyectoPav\obj\Debug\ProyectoPav.frmPrincipal.resources
+D:\Proyecto_PAVI_Consultorios-master\Prueba_A\ProyectoPav\obj\Debug\ProyectoPav.frmUsuarios.resources
+D:\Proyecto_PAVI_Consultorios-master\Prueba_A\ProyectoPav\obj\Debug\ProyectoPav.Properties.Resources.resources
+D:\Proyecto_PAVI_Consultorios-master\Prueba_A\ProyectoPav\obj\Debug\ProyectoPav.csproj.GenerateResource.Cache
+D:\ABM_Clase\ProyectoPav\bin\Debug\ProyectoPav.exe.config
+D:\ABM_Clase\ProyectoPav\obj\Debug\ProyectoPav.exe
+D:\ABM_Clase\ProyectoPav\obj\Debug\ProyectoPav.pdb
+G:\ABM_Clase\ProyectoPav\bin\Debug\ProyectoPav.exe.config
+G:\ABM_Clase\ProyectoPav\obj\Debug\ProyectoPav.exe
+G:\ABM_Clase\ProyectoPav\obj\Debug\ProyectoPav.pdb
