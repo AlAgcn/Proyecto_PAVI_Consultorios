@@ -49,7 +49,7 @@ namespace ProyectoPav
         {
             conexion.Close();
         }
-        public DataTable cargarTabla(String nombreTabla)
+        public DataTable llenar_Tabla(String nombreTabla)
         {
             DataTable tabla = new DataTable();
             conectar();
@@ -77,7 +77,6 @@ namespace ProyectoPav
                 int filas = comando.ExecuteNonQuery();
                 desconectar();
                 return filas;
-
             }
         }
 

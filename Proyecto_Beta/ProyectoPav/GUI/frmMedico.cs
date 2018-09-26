@@ -13,7 +13,7 @@ namespace ProyectoPav
     public partial class frmMedico : Form
     {
         BDHelper helper = new BDHelper();
-        frmPrincipal principal = new frmPrincipal();
+        FunctionHelper funciones = new FunctionHelper();
         bool newm = false;
         bool modm = false;
         bool delm = false;
@@ -43,7 +43,7 @@ namespace ProyectoPav
         private void frmMedico_Load(object sender, EventArgs e)
         {
             deshabilitarCampos();
-            principal.cargarLista(lstMedicos, "Medicos", "Apellido", "id");
+            funciones.cargarLista(lstMedicos, "Medicos", "Apellido", "id");
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -56,10 +56,10 @@ namespace ProyectoPav
 
         private void nuevoMedico()
         {
-            string sql = "INSERT INTO Medicos (Nombre, Apellido, Fecha_Ingreso) values ('" +
+            string sql = "INSERT INTO Medicos (Nombre, Apellido, Fecha_Ingreso, Estado) values ('" +
                           txtNombre.Text + "','" +
                           txtApellido.Text + "','" +
-                          dtpFecha.Value + "')";
+                          dtpFecha.Value.ToShortDateString() + "', 'S')";
             if (helper.consultaSQL(sql) > 0)
             {
                 MessageBox.Show("Medico agregado", "Nuevo Medico", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
@@ -114,6 +114,7 @@ namespace ProyectoPav
             }
             else
                 eliminarMedico();
+
             deshabilitarCampos();
             btnCancelar.Enabled = true;
             btnNuevo.Enabled = true;
@@ -121,16 +122,23 @@ namespace ProyectoPav
             txtNombre.ResetText();
             txtApellido.ResetText();
             dtpFecha.ResetText();
+            funciones.cargarLista(lstMedicos, "Medicos", "id", "Apellido");
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-
+            txtApellido.Clear();
+            txtApellido.Clear();
+            dtpFecha.ResetText();
+            deshabilitarCampos();
+            btnModificar.Enabled = true;
+            btnNuevo.Enabled = true;
+            btnEliminar.Enabled = true;
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-
+            Close();
         }
     }
 }

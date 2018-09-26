@@ -34,3 +34,12 @@ C:\Proyectos_Git\Proyecto_PAVI_Consultorios\Prueba_A\ProyectoPav\obj\Debug\Proye
 D:\Proyecto_Git\Proyecto_PAVI_Consultorios\Proyecto_Beta\ProyectoPav\bin\Debug\ProyectoPav.exe.config
 D:\Proyecto_Git\Proyecto_PAVI_Consultorios\Proyecto_Beta\ProyectoPav\obj\Debug\ProyectoPav.exe
 D:\Proyecto_Git\Proyecto_PAVI_Consultorios\Proyecto_Beta\ProyectoPav\obj\Debug\ProyectoPav.pdb
+D:\Proyecto_Git\Proyecto_PAVI_Consultorios\Proyecto_Beta\ProyectoPav\bin\Debug\ProyectoPav.exe
+D:\Proyecto_Git\Proyecto_PAVI_Consultorios\Proyecto_Beta\ProyectoPav\bin\Debug\ProyectoPav.pdb
+D:\Proyecto_Git\Proyecto_PAVI_Consultorios\Proyecto_Beta\ProyectoPav\obj\Debug\ProyectoPav.csprojResolveAssemblyReference.cache
+D:\Proyecto_Git\Proyecto_PAVI_Consultorios\Proyecto_Beta\ProyectoPav\obj\Debug\ProyectoPav.frmMedico.resources
+D:\Proyecto_Git\Proyecto_PAVI_Consultorios\Proyecto_Beta\ProyectoPav\obj\Debug\ProyectoPav.frmLogIn.resources
+D:\Proyecto_Git\Proyecto_PAVI_Consultorios\Proyecto_Beta\ProyectoPav\obj\Debug\ProyectoPav.frmPrincipal.resources
+D:\Proyecto_Git\Proyecto_PAVI_Consultorios\Proyecto_Beta\ProyectoPav\obj\Debug\ProyectoPav.frmUsuarios.resources
+D:\Proyecto_Git\Proyecto_PAVI_Consultorios\Proyecto_Beta\ProyectoPav\obj\Debug\ProyectoPav.Properties.Resources.resources
+D:\Proyecto_Git\Proyecto_PAVI_Consultorios\Proyecto_Beta\ProyectoPav\obj\Debug\ProyectoPav.csproj.GenerateResource.Cache

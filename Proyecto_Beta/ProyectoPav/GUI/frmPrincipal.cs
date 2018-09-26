@@ -17,20 +17,7 @@ namespace ProyectoPav
             InitializeComponent();
         }
 
-        public void cargarLista(ListBox lista, String tabla, string display, string value)
-        {
-            lista.DataSource = new BDHelper().consultaTabla_parametros("Select * FROM " + tabla);
-            lista.DisplayMember = display;
-            lista.ValueMember = value;
-        }
-
-        public void llenarCombo(ComboBox combo, String tabla, string display, string value)
-        {
-            combo.DataSource = new BDHelper().cargarTabla(tabla);
-            combo.DisplayMember = display;
-            combo.ValueMember = value;
-        }
-
+        
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
             new frmLogIn().ShowDialog();

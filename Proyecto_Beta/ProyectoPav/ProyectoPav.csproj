@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\FunctionHelper.cs" />
     <Compile Include="GUI\frmMedico.cs">
       <SubType>Form</SubType>
     </Compile>

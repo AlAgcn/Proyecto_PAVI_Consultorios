@@ -15,7 +15,8 @@ namespace ProyectoPav
         bool newu = false;
         bool modu = false;
         bool delu = false;
-        frmPrincipal principal = new frmPrincipal();
+        FunctionHelper funciones  = new FunctionHelper();
+        BDHelper oDatos = new BDHelper();
         public frmUsuarios()
         {
             InitializeComponent();
@@ -37,7 +38,7 @@ namespace ProyectoPav
             txtPassword.Enabled = true;
             txtConfirmarPassword.Enabled = true;
             cmbPerfil.Enabled = true;
-            principal.llenarCombo(cmbPerfil, "Perfiles", "n_perfil", "id_perfil");
+            funciones.llenarCombo(cmbPerfil, "Perfiles", "n_perfil", "id_perfil");
             btnGuardar.Enabled = true;
             btnCancelar.Enabled = true;
 
@@ -54,7 +55,7 @@ namespace ProyectoPav
         private void frmUsuarios_Load(object sender, EventArgs e)
         {
             deshabilitarCampos();
-            new frmPrincipal().cargarLista(lstUsuario, "Users where Estado='S'", "Usuario", "id");
+            funciones.cargarLista(lstUsuario, "Users", "id", "Usuario");
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -64,7 +65,6 @@ namespace ProyectoPav
             btnNuevo.Enabled = false;
             btnEliminar.Enabled = false;
             newu = true;
-
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -94,8 +94,9 @@ namespace ProyectoPav
                 eliminarUsuario();
                 delu = false;
             }
+
             deshabilitarCampos();
-            principal.cargarLista(lstUsuario, "Users", "Usuario", "id");
+            funciones.cargarLista(lstUsuario, "Users", "id", "Usuario");
             btnNuevo.Enabled = true;
             btnModificar.Enabled = true;
             btnEliminar.Enabled = true;
@@ -146,16 +147,16 @@ namespace ProyectoPav
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            txtUsuario.Enabled = true;
             btnNuevo.Enabled = false;
             btnModificar.Enabled = false;
             btnGuardar.Enabled = true;
+            btnCancelar.Enabled = true;
             delu = true;
           }
 
         private void nuevoUsuario()
         {
-            if (new BDHelper().siExiste("Users", "Usuario", txtUsuario.Text) == true  || txtConfirmarPassword.Text != txtPassword.Text)
+            if (oDatos.siExiste("Users", "Usuario", txtUsuario.Text) == true  || txtConfirmarPassword.Text != txtPassword.Text)
             {
                 MessageBox.Show("El usuario ingresado ya existe, o las constraseñas no coinciden", "Datos Fallidos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtUsuario.Clear();
@@ -168,13 +169,12 @@ namespace ProyectoPav
                 string str_sql = "INSERT INTO Users (Usuario, Password, id_perfil, Estado) values('"
                                     + txtUsuario.Text + "', '" + txtPassword.Text + "', '" + cmbPerfil.SelectedValue.ToString() + "','S')";
 
-                if (new BDHelper().consultaSQL(str_sql) > 0)
+                if (oDatos.consultaSQL(str_sql) > 0)
                 {
                     MessageBox.Show("Usuario agregado", "Nuevo Usuario", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
                 }
 
                 lstUsuario.ResetText();
-                new frmPrincipal().cargarLista(lstUsuario, "Users", "Usuario", "id");
                 deshabilitarCampos();
                 newu = false;
                 btnNuevo.Enabled = true;
@@ -188,46 +188,33 @@ namespace ProyectoPav
             btnModificar.Enabled = false;
             btnNuevo.Enabled = false;
 
-                if (new BDHelper().siExiste("Users", "Usuario", txtUsuario.Text) )
-                {
-                    if (txtConfirmarPassword.Text == txtPassword.Text)
-                    {
-                        string str_sql = "UPDATE Users SET Password='" + txtPassword.Text +
-                           "',id_perfil='" + cmbPerfil.SelectedValue.ToString() +
-                           "' WHERE Usuario='" + txtUsuario.Text + "'";
-                        if (new BDHelper().consultaSQL(str_sql) > 0)
+            if (txtConfirmarPassword.Text != txtPassword.Text || String.IsNullOrEmpty(txtUsuario.Text))
+            {
+                MessageBox.Show("No ingresó un Nombre de usuario o las contraseñas no coinciden", "Contraseña invalida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+               
+            }
+            else
+            {
+                string str_sql = "UPDATE Users SET Usuario='" + txtUsuario.Text +
+                                              "', Password='" + txtPassword.Text +
+                                             "', id_perfil='" + cmbPerfil.SelectedValue.ToString() +
+                                             "' WHERE Usuario='" + lstUsuario.Text +"'";
+                        if (oDatos.consultaSQL(str_sql) > 0)
                         {
                             MessageBox.Show("Usuario modificado", "Usuario Modificado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
                         }
-                    }
-                    else
-                        MessageBox.Show("Las contraseñas ingresadas no coinciden", "Contraseña invalida", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else
-                {
-                    MessageBox.Show("Debe ingresar algun usuario", "Error de usuario", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-              
-              
+                
             }
         private void eliminarUsuario()
             {
-                if (new BDHelper().siExiste("Users", "Usuario", txtUsuario.Text))
-            {
-                if (MessageBox.Show("¿Desea eliminar al usuario? " + txtUsuario.Text, "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+            if (MessageBox.Show("¿Desea eliminar al usuario? " + lstUsuario.Text , "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
                 {
                     string str_sql = "UPDATE Users Set Estado ='N' WHERE Usuario='" + txtUsuario.Text + "'";
-                    if (new BDHelper().consultaSQL(str_sql) > 0)
+                    if (oDatos.consultaSQL(str_sql) > 0)
                     {
                         MessageBox.Show("Usuario eliminado", "Usuario eliminado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
                     }
-
-                }
-                else
-                {
-                    MessageBox.Show("El usuario ingresado no existe", "Usuario no encontrado", MessageBoxButtons.OK);
-                    txtUsuario.Clear();
-                }
                 }
             }
     }
