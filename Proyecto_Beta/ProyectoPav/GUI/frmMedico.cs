@@ -43,7 +43,7 @@ namespace ProyectoPav
         private void frmMedico_Load(object sender, EventArgs e)
         {
             deshabilitarCampos();
-            funciones.cargarLista(lstMedicos, "Medicos", "Apellido", "id");
+            funciones.cargarLista(lstMedicos, "Medicos", "id", "Apellido");
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -58,8 +58,8 @@ namespace ProyectoPav
         {
             string sql = "INSERT INTO Medicos (Nombre, Apellido, Fecha_Ingreso, Estado) values ('" +
                           txtNombre.Text + "','" +
-                          txtApellido.Text + "','" +
-                          dtpFecha.Value.ToShortDateString() + "', 'S')";
+                          txtApellido.Text + "', '" +
+                          dtpFecha.Text + "', 'S')";
             if (helper.consultaSQL(sql) > 0)
             {
                 MessageBox.Show("Medico agregado", "Nuevo Medico", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
@@ -84,7 +84,9 @@ namespace ProyectoPav
 
         private void modificarMedico()
         {
-            string sql = "UPDATE Medicos SET Nombre='" + txtNombre.Text + "', Apellido='" + txtApellido.Text + "' WHERE Nombre='" + lstMedicos.SelectedValue.ToString() + "'";
+            string sql = "UPDATE Medicos SET Nombre='" + txtNombre.Text +
+                                "', Apellido='" + txtApellido.Text + 
+                                "' WHERE id='" + lstMedicos.SelectedValue.ToString() + "'";
             if (helper.consultaSQL(sql) > 0)
             {
                 MessageBox.Show("Usuario modificado", "Usuario Modificado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
@@ -100,7 +102,7 @@ namespace ProyectoPav
 
         private void eliminarMedico()
         {
-
+            string sql = "UPDATE Medicos SET Estado='N' WHERE id='" + lstMedicos.SelectedValue.ToString() + "'";
         }
         private void btnGuardar_Click(object sender, EventArgs e)
         {
@@ -116,9 +118,12 @@ namespace ProyectoPav
                 eliminarMedico();
 
             deshabilitarCampos();
-            btnCancelar.Enabled = true;
+            btnCancelar.Enabled = false;
             btnNuevo.Enabled = true;
             btnEliminar.Enabled = true;
+            newm = false;
+            modm = false;
+            delm = false;
             txtNombre.ResetText();
             txtApellido.ResetText();
             dtpFecha.ResetText();
