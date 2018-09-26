@@ -55,7 +55,8 @@ Revision text,
 Diagnostico text not null,
 Plan_Terapeutico text,
 Observaciones text,
-Fecha date
+Fecha date,
+
 )
 GO
 
@@ -66,6 +67,7 @@ Nombre nchar(15) not null,
 Apellido nchar(15) not null,
 Fecha_Ingreso date not null,
 Fecha_Egreso date,
+Estado varchar(1) not null
 )
 GO
 CREATE table Pacientes
@@ -78,6 +80,7 @@ Fecha_Nacimiento date not null,
 Obra_Social varchar(20),
 n_Afiliado int,
 Domicilio text,
-Telefono int
+Telefono int,
+Estado varchar(1) not null
 )
 GO
