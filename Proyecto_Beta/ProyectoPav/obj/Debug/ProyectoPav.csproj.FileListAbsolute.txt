@@ -31,3 +31,6 @@ C:\Proyectos_Git\Proyecto_PAVI_Consultorios\Prueba_A\ProyectoPav\obj\Debug\Proye
 C:\Proyectos_Git\Proyecto_PAVI_Consultorios\Prueba_A\ProyectoPav\obj\Debug\ProyectoPav.csproj.GenerateResource.Cache
 C:\Proyectos_Git\Proyecto_PAVI_Consultorios\Prueba_A\ProyectoPav\obj\Debug\ProyectoPav.frmMedico.resources
 C:\Proyectos_Git\Proyecto_PAVI_Consultorios\Prueba_A\ProyectoPav\obj\Debug\ProyectoPav.frmUsuarios.resources
+D:\Proyecto_Git\Proyecto_PAVI_Consultorios\Proyecto_Beta\ProyectoPav\bin\Debug\ProyectoPav.exe.config
+D:\Proyecto_Git\Proyecto_PAVI_Consultorios\Proyecto_Beta\ProyectoPav\obj\Debug\ProyectoPav.exe
+D:\Proyecto_Git\Proyecto_PAVI_Consultorios\Proyecto_Beta\ProyectoPav\obj\Debug\ProyectoPav.pdb
