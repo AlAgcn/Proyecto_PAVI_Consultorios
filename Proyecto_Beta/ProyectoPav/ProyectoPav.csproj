@@ -44,6 +44,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\DaoHistorialClinico.cs" />
+    <Compile Include="DAO\DaoPaciente.cs" />
+    <Compile Include="DAO\DaoUsuario.cs" />
+    <Compile Include="Performance\Paciente.cs" />
+    <Compile Include="Performance\AtencionMedica.cs" />
     <Compile Include="DAO\FunctionHelper.cs" />
     <Compile Include="GUI\frmMedico.cs">
       <SubType>Form</SubType>
@@ -51,6 +56,8 @@
     <Compile Include="GUI\frmMedico.Designer.cs">
       <DependentUpon>frmMedico.cs</DependentUpon>
     </Compile>
+    <Compile Include="Performance\HistorialClinico.cs" />
+    <Compile Include="Performance\Medico.cs" />
     <Compile Include="Performance\clsUsuario.cs" />
     <Compile Include="DAO\BDHelper.cs" />
     <Compile Include="GUI\frmUsuarios.cs">

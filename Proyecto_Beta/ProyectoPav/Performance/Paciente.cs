@@ -16,8 +16,6 @@ namespace ProyectoPav
         public string Obra_Social { set; get; }
         public int Id_Afiliado { set; get; }
         public int Telefono { set; get; }
-        public DateTime  Nacimiento { set; get; }
+        public DateTime Nacimiento { set; get; }
     }
-
-
 }
