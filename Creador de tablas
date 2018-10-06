@@ -72,8 +72,8 @@ GO
 CREATE table Pacientes
 (
 n_HistoriaClinica INT IDENTITY (0001,1),
-Nombre nchar(15) not null,
-Apellido nchar(15) not null,
+Nombre nchar(20) not null,
+Apellido nchar(20) not null,
 dni bigint not null,
 Fecha_Nacimiento date not null,
 Obra_Social varchar(20),
@@ -83,3 +83,37 @@ Telefono int,
 Estado varchar(1) not null
 )
 GO
+
+CREATE table Medicamentos
+(
+id INT IDENTITY,
+monodroga varchar,
+farmaco varchar not null,
+laboratorio varchar not null
+)
+INSERT into Medicamentos (monodroga, farmaco, laboratorio) values ('ibuprofeno','Ibupirac Suspension', 'Pfizer')
+INSERT into Medicamentos (monodroga, farmaco, laboratorio) values ('ibuprofeno','Febratic', 'Roemmers')
+INSERT into Medicamentos (monodroga, farmaco, laboratorio) values ('omeprazol','Ulcozol', 'Bago')
+INSERT into Medicamentos (monodroga, farmaco, laboratorio) values ('pantuprazol','Pantus', 'Baliarda')
+INSERT into Medicamentos (monodroga, farmaco, laboratorio) values ('pantuprazol','Pangest', 'Beta')
+INSERT into Medicamentos (monodroga, farmaco, laboratorio) values ('ranitidina','Gastrosedol', 'Nova Argentina')
+INSERT into Medicamentos (monodroga, farmaco, laboratorio) values ('ranitidina','Vizerul', 'Montpellier')
+INSERT into Medicamentos (monodroga, farmaco, laboratorio) values ('amoxicilina','Dartizil', 'Fabra')
+GO
+
+CREATE table Detalle_Medicamento
+(
+id INT IDENTITY,
+id_medicamento INT not null,
+frecuencia text not null,
+duracion varchar,
+id_plan INT not null
+)
+GO
+
+CREATE table Dietas
+(
+id INT IDENTITY,
+n_dieta varchar not null,
+indicacion text not null
+)
