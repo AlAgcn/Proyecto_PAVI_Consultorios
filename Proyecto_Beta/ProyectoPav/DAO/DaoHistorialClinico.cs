@@ -10,7 +10,7 @@ namespace ProyectoPav
 {
     class DaoHistorialClinico
     {
-        BDHelper ayudin = new BDHelper();
+        BDHelper helper = new BDHelper();
         private HistorialClinico map_HistorialClinico(DataRow row)
         {
             HistorialClinico histo = new HistorialClinico();
@@ -24,12 +24,12 @@ namespace ProyectoPav
         public HistorialClinico getByDni (int dni)
         {
             string str_sql = "SELECT * FROM Historias_Clinicas WHERE dni=" + dni.ToString();
-            DataTable tablin = new DataTable();
-            tablin = ayudin.consulta_oldb(str_sql);
-            if (tablin.Rows.Count > 0)
+            DataTable tabla = new DataTable();
+            tabla = helper.consultaTabla_parametros(str_sql);
+            if (tabla.Rows.Count > 0)
             {
                 HistorialClinico histo = new HistorialClinico();
-                histo = map_HistorialClinico(tablin.Rows[0]);
+                histo = map_HistorialClinico(tabla.Rows[0]);
                 return histo;
             }
             else
@@ -40,13 +40,13 @@ namespace ProyectoPav
         public bool agregarHistorial(HistorialClinico histo)
         {
             string str_sql="INSERT INTO Historias_Clinicas (Nombre,Apellido,dni) VALUES ('"+histo.nombre+"','"+histo.apellido+"',"+histo.dni.ToString()+")";
-            return (ayudin.consultaSQL(str_sql) == 1);
+            return (helper.consultaSQL(str_sql) == 1);
         }
         public bool actualizarHistorial(HistorialClinico histo)
         {
             string str_sql = "UPDATE Historias_Clinicas SET ";
             str_sql += "Nombre='" + histo.nombre + "', Apellido='" + histo.apellido + "',dni=" + histo.dni.ToString()+"WHERE cod="+histo.cod.ToString();
-            return (ayudin.consultaSQL(str_sql) == 1);
+            return (helper.consultaSQL(str_sql) == 1);
         }
     }
 }

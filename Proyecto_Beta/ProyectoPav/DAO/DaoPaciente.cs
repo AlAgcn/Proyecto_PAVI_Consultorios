@@ -9,7 +9,7 @@ namespace ProyectoPav
 {
     class DaoPaciente
     {
-        BDHelper ayudin = new BDHelper();
+        BDHelper helper = new BDHelper();
         private Paciente map_Pacient(DataRow row)
         {
             Paciente paci = new Paciente();
@@ -29,7 +29,7 @@ namespace ProyectoPav
         {
             string str_sql = "select * from Pacientes where Nombre='" + nombre + "', Apellido='" + apellido + "'";
             DataTable tablin = new DataTable();
-            tablin = ayudin.consulta_oldb(str_sql);
+            tablin = helper.consultaTabla_parametros(str_sql);
         
             if (tablin.Rows.Count >0 )
             {
@@ -44,9 +44,9 @@ namespace ProyectoPav
          }
         public Paciente getByHistory(int HC)
         {
-            string str_sql = "select * from Pacientes where n_HistoriaClinica=" + HC.ToString();
+            string str_sql = "SELECT * from Pacientes where n_HistoriaClinica=" + HC.ToString();
             DataTable tablin = new DataTable();
-            tablin = ayudin.consulta_oldb(str_sql);
+            tablin = helper.consultaTabla_parametros(str_sql);
             if (tablin.Rows.Count >0)
             {
                 Paciente paci = new Paciente();
@@ -60,10 +60,10 @@ namespace ProyectoPav
         }
         public bool agregarPaciente(Paciente paci)
         {
-            string str_sql = "INSERT INTO Pacientes (n_HistoriaClinica,Nombre,Apellido,dni,Fecha_Nacimiento,Obra_Social,n_Afiliado,Domicilio,Telefono) values";
-            str_sql+="("+paci.Id_HistorialClinico.ToString()+",'"+paci.Nombre+"','"+paci.Apellido+"',"+paci.Id_Dni.ToString()+","+paci.Nacimiento.ToString()+","+paci.Obra_Social;
+            string str_sql = "INSERT INTO Pacientes (Nombre,Apellido,dni,Fecha_Nacimiento,Obra_Social,n_Afiliado,Domicilio,Telefono) values ";
+            str_sql+="('"+paci.Nombre+"','"+paci.Apellido+"',"+paci.Id_Dni.ToString()+","+paci.Nacimiento.ToString()+","+paci.Obra_Social;
             str_sql += "," + paci.Id_Afiliado.ToString() + ",'" + paci.Domicilio + "'," + paci.Telefono.ToString()+")";
-            return (ayudin.consultaSQL(str_sql)==1);
+            return (helper.consultaSQL(str_sql)==1);
 
         }
         public bool actualizarPaciente(Paciente paci)
@@ -78,7 +78,7 @@ namespace ProyectoPav
             str_sql += ", Domicilio='" + paci.Domicilio+"'";
             str_sql += ", Telefono=" + paci.Telefono.ToString();
             str_sql += "WHERE dni=" + paci.Id_Dni.ToString();
-            return (ayudin.consultaSQL(str_sql)==1);
+            return (helper.consultaSQL(str_sql)==1);
             
         }
     }

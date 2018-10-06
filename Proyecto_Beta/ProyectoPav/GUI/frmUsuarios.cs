@@ -210,7 +210,7 @@ namespace ProyectoPav
             {
             if (MessageBox.Show("¿Desea eliminar al usuario? " + lstUsuario.Text , "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
                 {
-                    string str_sql = "UPDATE Users Set Estado ='N' WHERE Usuario='" + txtUsuario.Text + "'";
+                    string str_sql = "UPDATE Users Set Estado ='N' WHERE id='" + lstUsuario.SelectedValue + "'";
                     if (oDatos.consultaSQL(str_sql) > 0)
                     {
                         MessageBox.Show("Usuario eliminado", "Usuario eliminado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);

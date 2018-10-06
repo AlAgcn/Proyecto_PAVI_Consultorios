@@ -43,3 +43,6 @@ D:\Proyecto_Git\Proyecto_PAVI_Consultorios\Proyecto_Beta\ProyectoPav\obj\Debug\P
 D:\Proyecto_Git\Proyecto_PAVI_Consultorios\Proyecto_Beta\ProyectoPav\obj\Debug\ProyectoPav.frmUsuarios.resources
 D:\Proyecto_Git\Proyecto_PAVI_Consultorios\Proyecto_Beta\ProyectoPav\obj\Debug\ProyectoPav.Properties.Resources.resources
 D:\Proyecto_Git\Proyecto_PAVI_Consultorios\Proyecto_Beta\ProyectoPav\obj\Debug\ProyectoPav.csproj.GenerateResource.Cache
+D:\Proyecto_Git\Proyecto_PAVI_Consultorios\Proyecto_Beta\ProyectoPav\obj\Debug\ProyectoPav.frmElegirPaciente.resources
+D:\Proyecto_Git\Proyecto_PAVI_Consultorios\Proyecto_Beta\ProyectoPav\obj\Debug\ProyectoPav.frmAtencion.resources
+D:\Proyecto_Git\Proyecto_PAVI_Consultorios\Proyecto_Beta\ProyectoPav\obj\Debug\ProyectoPav.frmPaciente.resources

@@ -47,6 +47,24 @@
     <Compile Include="DAO\DaoHistorialClinico.cs" />
     <Compile Include="DAO\DaoPaciente.cs" />
     <Compile Include="DAO\DaoUsuario.cs" />
+    <Compile Include="GUI\frmPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmPaciente.Designer.cs">
+      <DependentUpon>frmPaciente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmElegirPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmElegirPaciente.designer.cs">
+      <DependentUpon>frmElegirPaciente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmAtencion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmAtencion.designer.cs">
+      <DependentUpon>frmAtencion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Performance\Paciente.cs" />
     <Compile Include="Performance\AtencionMedica.cs" />
     <Compile Include="DAO\FunctionHelper.cs" />
@@ -80,11 +98,21 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Performance\Usuario.cs" />
+    <EmbeddedResource Include="GUI\frmElegirPaciente.resx">
+      <DependentUpon>frmElegirPaciente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmAtencion.resx">
+      <DependentUpon>frmAtencion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmMedico.resx">
       <DependentUpon>frmMedico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmLogIn.resx">
       <DependentUpon>frmLogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmPaciente.resx">
+      <DependentUpon>frmPaciente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
@@ -116,7 +144,16 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\" />
+    <None Include="Resources\index.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medica.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8714750.image.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

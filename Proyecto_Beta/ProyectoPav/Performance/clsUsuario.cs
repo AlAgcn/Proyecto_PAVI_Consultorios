@@ -39,6 +39,11 @@ namespace ProyectoPav
             n_password = password;
             n_perfil = perfil;
         }
+
+        public clsUsuario()
+        {
+            // TODO: Complete member initialization
+        }
         public void mostrarDatos()
         {
 
