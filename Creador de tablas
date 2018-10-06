@@ -117,3 +117,15 @@ id INT IDENTITY,
 n_dieta varchar not null,
 indicacion text not null
 )
+GO
+
+CREATE table Obras_Sociales
+(
+id INT IDENTITY (0,1) not null,
+n_obrasocial varchar(15) not null
+)
+GO
+insert into Obras_Sociales (n_obrasocial) values ('OSDE')
+insert into Obras_Sociales (n_obrasocial) values ('APOS')
+insert into Obras_Sociales (n_obrasocial) values ('OSUNLaR')
+insert into Obras_Sociales (n_obrasocial) values ('PAMI')
