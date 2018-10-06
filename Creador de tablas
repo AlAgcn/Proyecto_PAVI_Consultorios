@@ -87,9 +87,9 @@ GO
 CREATE table Medicamentos
 (
 id INT IDENTITY,
-monodroga varchar,
-farmaco varchar not null,
-laboratorio varchar not null
+monodroga varchar(20),
+farmaco varchar(20) not null,
+laboratorio varchar(20) not null
 )
 INSERT into Medicamentos (monodroga, farmaco, laboratorio) values ('ibuprofeno','Ibupirac Suspension', 'Pfizer')
 INSERT into Medicamentos (monodroga, farmaco, laboratorio) values ('ibuprofeno','Febratic', 'Roemmers')
