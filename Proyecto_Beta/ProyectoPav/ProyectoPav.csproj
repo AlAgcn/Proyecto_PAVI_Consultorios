@@ -44,9 +44,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DAO\DaoHistorialClinico.cs" />
-    <Compile Include="DAO\DaoPaciente.cs" />
-    <Compile Include="DAO\DaoUsuario.cs" />
+    <Compile Include="DAO\HistorialClinicoHelper.cs" />
+    <Compile Include="DAO\PacienteHelper.cs" />
+    <Compile Include="DAO\UsuarioHelper.cs" />
     <Compile Include="GUI\frmPaciente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,8 +65,9 @@
     <Compile Include="GUI\frmAtencion.designer.cs">
       <DependentUpon>frmAtencion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Performance\Paciente.cs" />
-    <Compile Include="Performance\AtencionMedica.cs" />
+    <Compile Include="DAO\MedicoHelper.cs" />
+    <Compile Include="Performance\clsPaciente.cs" />
+    <Compile Include="Performance\clsAtencionMedica.cs" />
     <Compile Include="DAO\FunctionHelper.cs" />
     <Compile Include="GUI\frmMedico.cs">
       <SubType>Form</SubType>
@@ -74,9 +75,8 @@
     <Compile Include="GUI\frmMedico.Designer.cs">
       <DependentUpon>frmMedico.cs</DependentUpon>
     </Compile>
-    <Compile Include="Performance\HistorialClinico.cs" />
-    <Compile Include="Performance\Medico.cs" />
-    <Compile Include="Performance\clsUsuario.cs" />
+    <Compile Include="Performance\clsHistorialClinico.cs" />
+    <Compile Include="Performance\clsMedico.cs" />
     <Compile Include="DAO\BDHelper.cs" />
     <Compile Include="GUI\frmUsuarios.cs">
       <SubType>Form</SubType>
@@ -98,7 +98,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Performance\Usuario.cs" />
+    <Compile Include="Performance\clsUsuario.cs" />
     <EmbeddedResource Include="GUI\frmElegirPaciente.resx">
       <DependentUpon>frmElegirPaciente.cs</DependentUpon>
     </EmbeddedResource>

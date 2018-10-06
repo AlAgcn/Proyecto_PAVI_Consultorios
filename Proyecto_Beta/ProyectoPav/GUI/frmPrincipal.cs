@@ -42,5 +42,11 @@ namespace ProyectoPav
             abrir.ShowDialog();
         }
 
+        private void btnPacientes_Click(object sender, EventArgs e)
+        {
+            frmPaciente open = new frmPaciente();
+            open.ShowDialog();
+        }
+
     }
 }

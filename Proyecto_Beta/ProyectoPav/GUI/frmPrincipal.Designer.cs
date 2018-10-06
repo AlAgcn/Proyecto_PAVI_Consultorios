@@ -45,6 +45,7 @@
             this.btnPacientes.TabIndex = 2;
             this.btnPacientes.Text = "Pacientes";
             this.btnPacientes.UseVisualStyleBackColor = false;
+            this.btnPacientes.Click += new System.EventHandler(this.btnPacientes_Click);
             // 
             // btnHistoriaClinica
             // 
