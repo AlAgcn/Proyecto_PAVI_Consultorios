@@ -36,7 +36,7 @@
             this.cmdAgregarAtencion = new System.Windows.Forms.Button();
             this.cmdBuffer = new System.Windows.Forms.Button();
             this.cmdSalir = new System.Windows.Forms.Button();
-            this.gpbAtencion = new System.Windows.Forms.GroupBox();
+            this.gbxAtencion = new System.Windows.Forms.GroupBox();
             this.dtpHoy = new System.Windows.Forms.DateTimePicker();
             this.lblAnterior = new System.Windows.Forms.Label();
             this.lblActual = new System.Windows.Forms.Label();
@@ -45,16 +45,16 @@
             this.lblMedico = new System.Windows.Forms.Label();
             this.lblPaciente = new System.Windows.Forms.Label();
             this.lblHistorial = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.gpbAtencion.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.gbxSOAP = new System.Windows.Forms.GroupBox();
+            this.gbxAtencion.SuspendLayout();
+            this.gbxSOAP.SuspendLayout();
             this.SuspendLayout();
             // 
             // cmdMotivos
             // 
-            this.cmdMotivos.Location = new System.Drawing.Point(19, 22);
+            this.cmdMotivos.Location = new System.Drawing.Point(19, 41);
             this.cmdMotivos.Name = "cmdMotivos";
-            this.cmdMotivos.Size = new System.Drawing.Size(108, 63);
+            this.cmdMotivos.Size = new System.Drawing.Size(136, 44);
             this.cmdMotivos.TabIndex = 0;
             this.cmdMotivos.Text = "Motivos";
             this.cmdMotivos.UseVisualStyleBackColor = true;
@@ -62,9 +62,9 @@
             // 
             // cmdRevision
             // 
-            this.cmdRevision.Location = new System.Drawing.Point(19, 91);
+            this.cmdRevision.Location = new System.Drawing.Point(19, 110);
             this.cmdRevision.Name = "cmdRevision";
-            this.cmdRevision.Size = new System.Drawing.Size(108, 59);
+            this.cmdRevision.Size = new System.Drawing.Size(136, 44);
             this.cmdRevision.TabIndex = 1;
             this.cmdRevision.Text = "Revision";
             this.cmdRevision.UseVisualStyleBackColor = true;
@@ -72,9 +72,9 @@
             // 
             // cmdPlan
             // 
-            this.cmdPlan.Location = new System.Drawing.Point(19, 257);
+            this.cmdPlan.Location = new System.Drawing.Point(19, 276);
             this.cmdPlan.Name = "cmdPlan";
-            this.cmdPlan.Size = new System.Drawing.Size(108, 75);
+            this.cmdPlan.Size = new System.Drawing.Size(136, 44);
             this.cmdPlan.TabIndex = 2;
             this.cmdPlan.Text = "Plan Terapeutico";
             this.cmdPlan.UseVisualStyleBackColor = true;
@@ -82,9 +82,9 @@
             // 
             // cmdDiagnostico
             // 
-            this.cmdDiagnostico.Location = new System.Drawing.Point(19, 170);
+            this.cmdDiagnostico.Location = new System.Drawing.Point(19, 189);
             this.cmdDiagnostico.Name = "cmdDiagnostico";
-            this.cmdDiagnostico.Size = new System.Drawing.Size(108, 70);
+            this.cmdDiagnostico.Size = new System.Drawing.Size(136, 44);
             this.cmdDiagnostico.TabIndex = 3;
             this.cmdDiagnostico.Text = "Diagnostico";
             this.cmdDiagnostico.UseVisualStyleBackColor = true;
@@ -92,9 +92,9 @@
             // 
             // cmdObservacion
             // 
-            this.cmdObservacion.Location = new System.Drawing.Point(19, 358);
+            this.cmdObservacion.Location = new System.Drawing.Point(19, 377);
             this.cmdObservacion.Name = "cmdObservacion";
-            this.cmdObservacion.Size = new System.Drawing.Size(108, 75);
+            this.cmdObservacion.Size = new System.Drawing.Size(136, 44);
             this.cmdObservacion.TabIndex = 4;
             this.cmdObservacion.Text = "Observacion";
             this.cmdObservacion.UseVisualStyleBackColor = true;
@@ -129,20 +129,19 @@
             this.cmdSalir.UseVisualStyleBackColor = true;
             this.cmdSalir.Click += new System.EventHandler(this.cmdSalir_Click);
             // 
-            // gpbAtencion
+            // gbxAtencion
             // 
-            this.gpbAtencion.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.gpbAtencion.Controls.Add(this.dtpHoy);
-            this.gpbAtencion.Controls.Add(this.lblAnterior);
-            this.gpbAtencion.Controls.Add(this.lblActual);
-            this.gpbAtencion.Controls.Add(this.rcbActual);
-            this.gpbAtencion.Controls.Add(this.rcbAnterior);
-            this.gpbAtencion.Location = new System.Drawing.Point(239, 122);
-            this.gpbAtencion.Name = "gpbAtencion";
-            this.gpbAtencion.Size = new System.Drawing.Size(433, 344);
-            this.gpbAtencion.TabIndex = 8;
-            this.gpbAtencion.TabStop = false;
-            this.gpbAtencion.Text = "groupBox1";
+            this.gbxAtencion.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.gbxAtencion.Controls.Add(this.dtpHoy);
+            this.gbxAtencion.Controls.Add(this.lblAnterior);
+            this.gbxAtencion.Controls.Add(this.lblActual);
+            this.gbxAtencion.Controls.Add(this.rcbActual);
+            this.gbxAtencion.Controls.Add(this.rcbAnterior);
+            this.gbxAtencion.Location = new System.Drawing.Point(239, 122);
+            this.gbxAtencion.Name = "gbxAtencion";
+            this.gbxAtencion.Size = new System.Drawing.Size(433, 344);
+            this.gbxAtencion.TabIndex = 8;
+            this.gbxAtencion.TabStop = false;
             // 
             // dtpHoy
             // 
@@ -214,20 +213,20 @@
             this.lblHistorial.TabIndex = 11;
             this.lblHistorial.Text = "label3";
             // 
-            // groupBox2
+            // gbxSOAP
             // 
-            this.groupBox2.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.groupBox2.Controls.Add(this.cmdObservacion);
-            this.groupBox2.Controls.Add(this.cmdPlan);
-            this.groupBox2.Controls.Add(this.cmdDiagnostico);
-            this.groupBox2.Controls.Add(this.cmdRevision);
-            this.groupBox2.Controls.Add(this.cmdMotivos);
-            this.groupBox2.Location = new System.Drawing.Point(12, 22);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(172, 468);
-            this.groupBox2.TabIndex = 14;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "groupBox2";
+            this.gbxSOAP.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.gbxSOAP.Controls.Add(this.cmdObservacion);
+            this.gbxSOAP.Controls.Add(this.cmdPlan);
+            this.gbxSOAP.Controls.Add(this.cmdDiagnostico);
+            this.gbxSOAP.Controls.Add(this.cmdRevision);
+            this.gbxSOAP.Controls.Add(this.cmdMotivos);
+            this.gbxSOAP.Location = new System.Drawing.Point(12, 22);
+            this.gbxSOAP.Name = "gbxSOAP";
+            this.gbxSOAP.Size = new System.Drawing.Size(172, 468);
+            this.gbxSOAP.TabIndex = 14;
+            this.gbxSOAP.TabStop = false;
+            this.gbxSOAP.Text = "S.O.A.P";
             // 
             // frmAtencion
             // 
@@ -238,17 +237,17 @@
             this.Controls.Add(this.lblHistorial);
             this.Controls.Add(this.lblPaciente);
             this.Controls.Add(this.lblMedico);
-            this.Controls.Add(this.gpbAtencion);
+            this.Controls.Add(this.gbxAtencion);
             this.Controls.Add(this.cmdSalir);
             this.Controls.Add(this.cmdBuffer);
             this.Controls.Add(this.cmdAgregarAtencion);
-            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.gbxSOAP);
             this.Name = "frmAtencion";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.frmAtencion_Load);
-            this.gpbAtencion.ResumeLayout(false);
-            this.gpbAtencion.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
+            this.gbxAtencion.ResumeLayout(false);
+            this.gbxAtencion.PerformLayout();
+            this.gbxSOAP.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -264,7 +263,7 @@
         private System.Windows.Forms.Button cmdAgregarAtencion;
         private System.Windows.Forms.Button cmdBuffer;
         private System.Windows.Forms.Button cmdSalir;
-        private System.Windows.Forms.GroupBox gpbAtencion;
+        private System.Windows.Forms.GroupBox gbxAtencion;
         private System.Windows.Forms.Label lblAnterior;
         private System.Windows.Forms.Label lblActual;
         private System.Windows.Forms.RichTextBox rcbActual;
@@ -272,7 +271,7 @@
         private System.Windows.Forms.Label lblMedico;
         private System.Windows.Forms.Label lblPaciente;
         private System.Windows.Forms.Label lblHistorial;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox gbxSOAP;
         private System.Windows.Forms.DateTimePicker dtpHoy;
     }
 }

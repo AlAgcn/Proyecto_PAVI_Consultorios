@@ -27,7 +27,7 @@ namespace ProyectoPav
         {
             lblPaciente.Text = NOM;
             lblHistorial.Text = HISTO.ToString();
-            gpbAtencion.Text = "Motivos";
+            gbxAtencion.Text = "Motivos";
             lblAnterior.Text = "Motivos anteriores";
             lblActual.Text = "Motivos actuales";
             atr = 1;
@@ -36,7 +36,7 @@ namespace ProyectoPav
 
         private void cmdMotivos_Click(object sender, EventArgs e)
         {
-            gpbAtencion.Text = "Motivos";
+            gbxAtencion.Text = "Motivos";
             lblAnterior.Text = "Motivos anteriores";
             lblActual.Text = "Motivos actuales";
             atr = 1;
@@ -44,7 +44,7 @@ namespace ProyectoPav
 
         private void cmdRevision_Click(object sender, EventArgs e)
         {
-            gpbAtencion.Text = "Revision";
+            gbxAtencion.Text = "Revision";
             lblAnterior.Text = "Revision anteriores";
             lblActual.Text = "Revision actual";
             atr = 2;
@@ -53,7 +53,7 @@ namespace ProyectoPav
 
         private void cmdDiagnostico_Click(object sender, EventArgs e)
         {
-            gpbAtencion.Text = "Diagnostico";
+            gbxAtencion.Text = "Diagnostico";
             lblAnterior.Text = "Diagnostico anteriores";
             lblActual.Text = "Diagnostico actual";
             atr = 3;
@@ -61,7 +61,7 @@ namespace ProyectoPav
 
         private void cmdPlan_Click(object sender, EventArgs e)
         {
-            gpbAtencion.Text = "Plan Terapeutico";
+            gbxAtencion.Text = "Plan Terapeutico";
             lblAnterior.Text = "Planes anteriores";
             lblActual.Text = "Plan actual";
             atr = 4;
@@ -69,7 +69,7 @@ namespace ProyectoPav
 
         private void cmdObservacion_Click(object sender, EventArgs e)
         {
-            gpbAtencion.Text = "Observacion";
+            gbxAtencion.Text = "Observacion";
             lblAnterior.Text = "Observaciones anteriores";
             lblActual.Text = "Observacion actual";
             atr = 5;

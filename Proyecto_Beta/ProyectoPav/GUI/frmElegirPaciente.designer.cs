@@ -40,6 +40,10 @@
             this.lblNombrePaciente = new System.Windows.Forms.Label();
             this.lblHistoClinica = new System.Windows.Forms.Label();
             this.lblDNI = new System.Windows.Forms.Label();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dni = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hclinica = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPacientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,6 +80,11 @@
             // dgvPacientes
             // 
             this.dgvPacientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPacientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Nombre,
+            this.Apellido,
+            this.dni,
+            this.hclinica});
             this.dgvPacientes.Location = new System.Drawing.Point(24, 150);
             this.dgvPacientes.Name = "dgvPacientes";
             this.dgvPacientes.Size = new System.Drawing.Size(588, 150);
@@ -145,6 +154,26 @@
             this.lblDNI.TabIndex = 4;
             this.lblDNI.Text = "DNI";
             // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            // 
+            // Apellido
+            // 
+            this.Apellido.HeaderText = "Apellido";
+            this.Apellido.Name = "Apellido";
+            // 
+            // dni
+            // 
+            this.dni.HeaderText = "DNI";
+            this.dni.Name = "dni";
+            // 
+            // hclinica
+            // 
+            this.hclinica.HeaderText = "Historia Clinica";
+            this.hclinica.Name = "hclinica";
+            // 
             // frmElegirPaciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -184,5 +213,9 @@
         private System.Windows.Forms.Label lblNombrePaciente;
         private System.Windows.Forms.Label lblHistoClinica;
         private System.Windows.Forms.Label lblDNI;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Apellido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dni;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hclinica;
     }
 }

@@ -20,43 +20,50 @@ namespace ProyectoPav
 
         private void cmdConsultar_Click(object sender, EventArgs e)
         {
+            string str = "SELECT Nombre,Apellido, dni, Historia_Clinica FROM PACIENTES WHERE 1=1";
+            if (!(txtNombre.Text == string.Empty))
+                str += " AND Nomnbre='" + txtNombre.Text + "'";
+            if (!(txtApellido.Text == string.Empty))
+            {
+                str += " AND Apellido='" + txtApellido.Text + "'";
+            }
+            if (!(txtDni.Text == string.Empty))
+            {
+                str += " AND dni=" + txtDni.Text + "";
+            }
+            if (!(txtHistoria.Text == string.Empty))
+            {
+                str += " AND n_historiaclinica=" + txtHistoria.Text + "";
+            }
           dgvPacientes.Rows.Clear();
-          dgvPacientes.DataSource = oDatos.consultaTabla_parametros(new frmElegirPaciente().Parametros(txtNombre, txtHistoria, txtDni, txtApellido, "Nombre", "Historia_Clinica", "dni", "Apellido"));
+          DataTable aux = new DataTable();
+          aux = oDatos.consultaTabla_parametros(str);
+          llenarGrilla(dgvPacientes, aux);
         }
-        private string Parametros(TextBox txt1,TextBox txt2, TextBox txt3, TextBox txt4,string par1, string par2, string par3,string par4)
-        {
-            string str="SELECT Nombre,Apellido, dni, Historia_Clinica FROM PACIENTES WHERE 1=1";
-            if (!(txt1.Text==string.Empty))
-                str += " AND " + par1 + "='" + txt1.Text + "'";
-            if (!(txt2.Text == string.Empty))
-            {
-                str += " AND " + par2 + "='" + txt2.Text + "'";
-            }
-            if (!(txt3.Text == string.Empty))
-            {
-                str += " AND " + par3 + "=" + txt3.Text + "";
-            }
-            if (!(txt4.Text == string.Empty))
-            {
-                str += " AND " + par4 + "=" + txt4.Text + "";
-            }
-            return str;
 
+        private void llenarGrilla(DataGridView grilla, DataTable data)
+        {
+            for (int i=0; i<data.Rows.Count; i++)
+            {
+                grilla.Rows.Add(data.Rows[i]["Nombre"], 
+                                data.Rows[i]["Apellido"], 
+                                data.Rows[i]["dni"], 
+                                data.Rows[i]["n_HistoriaClinica"]);
+            }
         }
 
         private void cmdDetalle_Click(object sender, EventArgs e)
         {
-            string str = dgvPacientes.CurrentRow.Cells[0].Value.ToString();
+            string str = dgvPacientes.CurrentRow.Cells[3].Value.ToString();
             int histo = int.Parse(dgvPacientes.CurrentRow.Cells[3].Value.ToString());
-            frmAtencion formi = new frmAtencion(str, histo);
-            formi.ShowDialog();
+            frmAtencion form = new frmAtencion(str, histo);
+            form.ShowDialog();
         }
 
         private void cmdSalir_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
 
     }
 }

@@ -72,6 +72,8 @@
       <DependentUpon>frmAtencion.cs</DependentUpon>
     </Compile>
     <Compile Include="DAO\MedicoHelper.cs" />
+    <Compile Include="DAO\MedicamentoHelper.cs" />
+    <Compile Include="Performance\clsMedicamento.cs" />
     <Compile Include="Performance\clsPaciente.cs" />
     <Compile Include="Performance\clsAtencionMedica.cs" />
     <Compile Include="DAO\FunctionHelper.cs" />

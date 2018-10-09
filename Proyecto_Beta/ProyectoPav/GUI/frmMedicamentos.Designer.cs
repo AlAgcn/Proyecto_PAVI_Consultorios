@@ -41,39 +41,42 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.txtMonodroga = new System.Windows.Forms.TextBox();
+            this.lblMonodroga = new System.Windows.Forms.Label();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtFarmaco
             // 
-            this.txtFarmaco.Location = new System.Drawing.Point(93, 55);
+            this.txtFarmaco.Location = new System.Drawing.Point(93, 62);
             this.txtFarmaco.Name = "txtFarmaco";
-            this.txtFarmaco.Size = new System.Drawing.Size(100, 20);
+            this.txtFarmaco.Size = new System.Drawing.Size(269, 20);
             this.txtFarmaco.TabIndex = 0;
             // 
             // txtLaboratorio
             // 
             this.txtLaboratorio.Location = new System.Drawing.Point(93, 109);
             this.txtLaboratorio.Name = "txtLaboratorio";
-            this.txtLaboratorio.Size = new System.Drawing.Size(100, 20);
+            this.txtLaboratorio.Size = new System.Drawing.Size(269, 20);
             this.txtLaboratorio.TabIndex = 1;
             // 
             // txtMedicamento
             // 
             this.txtMedicamento.Location = new System.Drawing.Point(212, 23);
             this.txtMedicamento.Name = "txtMedicamento";
-            this.txtMedicamento.Size = new System.Drawing.Size(362, 20);
+            this.txtMedicamento.Size = new System.Drawing.Size(150, 20);
             this.txtMedicamento.TabIndex = 2;
             // 
             // txtId
             // 
-            this.txtId.Location = new System.Drawing.Point(83, 20);
+            this.txtId.Location = new System.Drawing.Point(93, 23);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(34, 20);
             this.txtId.TabIndex = 3;
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(133, 20);
+            this.btnBuscar.Location = new System.Drawing.Point(149, 21);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(36, 23);
             this.btnBuscar.TabIndex = 4;
@@ -83,7 +86,7 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(546, 242);
+            this.btnSalir.Location = new System.Drawing.Point(311, 248);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 5;
@@ -92,7 +95,7 @@
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Location = new System.Drawing.Point(23, 242);
+            this.btnNuevo.Location = new System.Drawing.Point(27, 210);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(75, 23);
             this.btnNuevo.TabIndex = 6;
@@ -102,7 +105,7 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(251, 242);
+            this.btnEliminar.Location = new System.Drawing.Point(169, 210);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 23);
             this.btnEliminar.TabIndex = 7;
@@ -112,7 +115,7 @@
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(133, 242);
+            this.btnModificar.Location = new System.Drawing.Point(27, 248);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(75, 23);
             this.btnModificar.TabIndex = 8;
@@ -122,7 +125,7 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(388, 242);
+            this.btnGuardar.Location = new System.Drawing.Point(169, 248);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
             this.btnGuardar.TabIndex = 9;
@@ -142,7 +145,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 109);
+            this.label2.Location = new System.Drawing.Point(6, 113);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 13);
             this.label2.TabIndex = 11;
@@ -157,11 +160,39 @@
             this.label3.TabIndex = 12;
             this.label3.Text = "Farmaco";
             // 
+            // txtMonodroga
+            // 
+            this.txtMonodroga.Location = new System.Drawing.Point(93, 156);
+            this.txtMonodroga.Name = "txtMonodroga";
+            this.txtMonodroga.Size = new System.Drawing.Size(269, 20);
+            this.txtMonodroga.TabIndex = 13;
+            // 
+            // lblMonodroga
+            // 
+            this.lblMonodroga.AutoSize = true;
+            this.lblMonodroga.Location = new System.Drawing.Point(6, 164);
+            this.lblMonodroga.Name = "lblMonodroga";
+            this.lblMonodroga.Size = new System.Drawing.Size(61, 13);
+            this.lblMonodroga.TabIndex = 14;
+            this.lblMonodroga.Text = "Monodroga";
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Location = new System.Drawing.Point(311, 210);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.TabIndex = 15;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            // 
             // frmMedicamentos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(680, 315);
+            this.ClientSize = new System.Drawing.Size(431, 287);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.lblMonodroga);
+            this.Controls.Add(this.txtMonodroga);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -177,6 +208,7 @@
             this.Controls.Add(this.txtFarmaco);
             this.Name = "frmMedicamentos";
             this.Text = "frmMedicamentos";
+            this.Load += new System.EventHandler(this.frmMedicamentos_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -197,5 +229,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtMonodroga;
+        private System.Windows.Forms.Label lblMonodroga;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }

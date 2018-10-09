@@ -12,16 +12,41 @@ namespace ProyectoPav
 {
     public partial class frmMedicamentos : Form
     {
+
+        Boolean nv;
+        Boolean md;
+        Boolean rm;
         public frmMedicamentos()
         {
             InitializeComponent();
         }
-        Boolean nv;
-        Boolean md;
-        Boolean rm;
+
+        private void frmMedicamentos_Load(object sender, EventArgs e)
+        {
+            deshabilitarBotones();
+        }
+
+        private void deshabilitarBotones()
+        {
+            txtMonodroga.Enabled = false;
+            txtLaboratorio.Enabled = false;
+            txtFarmaco.Enabled = false;
+            btnCancelar.Enabled = false;
+            btnGuardar.Enabled = false;
+        }
+
+        private void habilitarBotones()
+        {
+            txtMonodroga.Enabled = true;
+            txtLaboratorio.Enabled = true;
+            txtFarmaco.Enabled = true;
+            btnCancelar.Enabled = true;
+            btnGuardar.Enabled = true;
+        }
+
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            txtFarmaco.Text = new BDHelper().consultaTabla_parametros("Select monodrofa from Medicamentos where id=" + txtId.Text).Rows[0][0].ToString();
+            txtFarmaco.Text = new BDHelper().consultaTabla_parametros("Select monodroga from Medicamentos where id=" + txtId.Text).Rows[0][0].ToString();
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -58,7 +83,6 @@ namespace ProyectoPav
             txtMedicamento.ResetText();
         }
 
-
-
+        
     }
 }

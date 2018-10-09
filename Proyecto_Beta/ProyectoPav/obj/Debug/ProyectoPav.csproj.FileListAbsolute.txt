@@ -61,3 +61,4 @@ D:\Usuario\Escritorio\Cosas Raras\Progrmacionn\basura\Proyecto_PAVI_Consultorios
 D:\Usuario\Escritorio\Cosas Raras\Progrmacionn\basura\Proyecto_PAVI_Consultorios-master\Proyecto_Beta\ProyectoPav\obj\Debug\ProyectoPav.frmUsuarios.resources
 D:\Usuario\Escritorio\Cosas Raras\Progrmacionn\basura\Proyecto_PAVI_Consultorios-master\Proyecto_Beta\ProyectoPav\obj\Debug\ProyectoPav.Properties.Resources.resources
 D:\Usuario\Escritorio\Cosas Raras\Progrmacionn\basura\Proyecto_PAVI_Consultorios-master\Proyecto_Beta\ProyectoPav\obj\Debug\ProyectoPav.csproj.GenerateResource.Cache
+D:\Proyecto_Git\Proyecto_PAVI_Consultorios\Proyecto_Beta\ProyectoPav\obj\Debug\ProyectoPav.frmMedicamentos.resources
