@@ -17,7 +17,13 @@ namespace ProyectoPav
             med.Farmaco = row["farmaco"].ToString();
             med.Laboratorio = row["laboratorio"].ToString();
             return med;
+        }
 
+        public bool agregarMedicamento(clsMedicamento medicine)
+        {
+            string sql = "Insert into Medicamentos (monodroga, farmaco, laboratorio) "
+                        + "values ('" + medicine.Monodroga + "', '" + medicine.Farmaco + "', '" + medicine.Laboratorio + "')";
+            return (helper.consultaSQL(sql) == 1);
         }
     }
 }

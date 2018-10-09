@@ -12,7 +12,7 @@ namespace ProyectoPav
 {
     public partial class frmMedicamentos : Form
     {
-
+        MedicamentoHelper medhelp = new MedicamentoHelper();
         Boolean nv;
         Boolean md;
         Boolean rm;
@@ -51,6 +51,7 @@ namespace ProyectoPav
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
+            habilitarBotones();
             nv = true;
         }
 
@@ -68,7 +69,9 @@ namespace ProyectoPav
         {
             if (nv)
             {
-                new BDHelper().consultaSQL("INSERTE INTO Medicamentos (monodroga,farmaco,laboratorio) VALUES ('" + txtMedicamento.Text + "','" + txtFarmaco.Text + "','" + txtLaboratorio.Text + "')");
+                clsMedicamento medic = new clsMedicamento(txtMonodroga.Text, txtFarmaco.Text, txtLaboratorio.Text);
+                if (medhelp.agregarMedicamento(medic))
+                    MessageBox.Show("Medicamento agregado", "Nuevo Medicamento", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             if (md)
                 {
@@ -81,6 +84,12 @@ namespace ProyectoPav
             txtFarmaco.ResetText();
             txtLaboratorio.ResetText();
             txtMedicamento.ResetText();
+            deshabilitarBotones();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Close();
         }
 
         
