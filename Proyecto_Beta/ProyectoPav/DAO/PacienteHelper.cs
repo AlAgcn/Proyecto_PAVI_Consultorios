@@ -77,9 +77,14 @@ namespace ProyectoPav
             str_sql += ", n_Afiliado="+ paci.nro_Afiliado;
             str_sql += ", Domicilio='" + paci.domicilio+"'";
             str_sql += ", Telefono=" + paci.telefono.ToString();
-            str_sql += "WHERE dni=" + paci.dni.ToString();
+            str_sql += " WHERE dni=" + paci.dni.ToString();
             return (helper.consultaSQL(str_sql)==1);
             
+        }
+        public bool eliminarPaciente(string nombre, string apellido)
+        {
+            string str_sql = "UPDATE Pacientes SET Estado='N' WHERE Nombre='" + nombre + "' AND Apellido='" + apellido + "'";
+            return (helper.consultaSQL(str_sql) == 1);
         }
     }
 }

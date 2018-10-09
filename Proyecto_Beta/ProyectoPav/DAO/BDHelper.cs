@@ -4,26 +4,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
-using System.Data.SqlClient;
+using System.Data.OleDb;
 
 namespace ProyectoPav
 {
     class BDHelper
     {
         private string cadConexion;
-        private SqlConnection conexion;
-        private SqlCommand comando;
+        private OleDbConnection  conexion;
+        private OleDbCommand  comando;
         public string CadConexion
         {
             get { return cadConexion; }
             set { cadConexion = value; }
         }
-        public SqlConnection Conexion
+        public OleDbConnection  Conexion
         {
             get { return conexion; }
             set { conexion = value; }
         }
-        public SqlCommand Comando
+        public OleDbCommand  Comando
         {
             get { return comando; }
             set { comando = value; }
@@ -31,15 +31,15 @@ namespace ProyectoPav
 
         public BDHelper()
         {
-            cadConexion = @"Data Source=(localdb)\MiBase;Initial Catalog=MyFirst;Integrated Security=True";
-            conexion = new SqlConnection();
-            comando = new SqlCommand();
+            cadConexion = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source='D:\Usuario\Escritorio\Cosas Raras\Progrmacionn\Base de Datosssss\Base de Datos access_TP_PAV\TablasConsultorio_TP_Integrador.mdb'";
+            conexion = new OleDbConnection() ;
+            comando = new OleDbCommand();
 
         }
         private void conectar()
         {
-            conexion = new SqlConnection();
-            comando = new SqlCommand();
+            conexion = new OleDbConnection();
+            comando = new OleDbCommand();
             conexion.ConnectionString = cadConexion;
             conexion.Open();
             comando.Connection = conexion;

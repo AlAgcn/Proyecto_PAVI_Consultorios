@@ -95,7 +95,13 @@ namespace ProyectoPav
 
         private void eliminarPaciente()
         {
-            throw new NotImplementedException();
+            PacienteHelper paci = new PacienteHelper();
+           bool bol= paci.eliminarPaciente(txtNombre.Text, txtApellido.Text);
+            if (bol)
+            {
+                MessageBox.Show("se elimino con exito");
+            }
+
         }
 
         private void modificarPaciente()
@@ -111,7 +117,16 @@ namespace ProyectoPav
             else if (modp)
                 modificarPaciente();
             else if (delp)
-                eliminarPaciente();
+            {
+                if(txtApellido.Text==string.Empty && txtNombre.Text==string.Empty  )
+                {
+                    MessageBox.Show("tiene que llenar ambos campos");
+                }
+                else
+                { eliminarPaciente();
+                }
+            
+           }
 
             blanquearCampos();
             deshabilitarCampos();
@@ -136,6 +151,30 @@ namespace ProyectoPav
         private void btnSalir_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Debe ingresar el nombre y apellido del paciente");
+            deshabilitarCampos();
+            txtNombre.Enabled = true;
+            txtApellido.Enabled = true;
+            btnGuardar.Enabled = true;
+            delp = true;
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            clsPaciente paci = new clsPaciente();
+            paci.apellido = txtApellido.Text;
+            paci.dni = int.Parse(txtDNI.Text);
+            paci.domicilio = txtDomicilio.Text;
+            paci.nombre=txtNombre.Text;
+            paci.nro_Afiliado = int.Parse(txtNumeroDeSocio.Text);
+            paci.obra_Social = txtObraSocial.Text;
+            paci.telefono = int.Parse(txtTelefono.Text);
+            PacienteHelper pacih = new PacienteHelper();
+            pacih.actualizarPaciente(paci);
         }
     }
 }

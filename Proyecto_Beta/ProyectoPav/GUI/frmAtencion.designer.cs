@@ -40,8 +40,8 @@
             this.dtpHoy = new System.Windows.Forms.DateTimePicker();
             this.lblAnterior = new System.Windows.Forms.Label();
             this.lblActual = new System.Windows.Forms.Label();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.rcbActual = new System.Windows.Forms.RichTextBox();
+            this.rcbAnterior = new System.Windows.Forms.RichTextBox();
             this.lblMedico = new System.Windows.Forms.Label();
             this.lblPaciente = new System.Windows.Forms.Label();
             this.lblHistorial = new System.Windows.Forms.Label();
@@ -117,6 +117,7 @@
             this.cmdBuffer.TabIndex = 6;
             this.cmdBuffer.Text = "Guardar";
             this.cmdBuffer.UseVisualStyleBackColor = true;
+            this.cmdBuffer.Click += new System.EventHandler(this.cmdBuffer_Click);
             // 
             // cmdSalir
             // 
@@ -134,8 +135,8 @@
             this.gpbAtencion.Controls.Add(this.dtpHoy);
             this.gpbAtencion.Controls.Add(this.lblAnterior);
             this.gpbAtencion.Controls.Add(this.lblActual);
-            this.gpbAtencion.Controls.Add(this.richTextBox2);
-            this.gpbAtencion.Controls.Add(this.richTextBox1);
+            this.gpbAtencion.Controls.Add(this.rcbActual);
+            this.gpbAtencion.Controls.Add(this.rcbAnterior);
             this.gpbAtencion.Location = new System.Drawing.Point(239, 122);
             this.gpbAtencion.Name = "gpbAtencion";
             this.gpbAtencion.Size = new System.Drawing.Size(433, 344);
@@ -170,21 +171,21 @@
             this.lblActual.TabIndex = 12;
             this.lblActual.Text = "label4";
             // 
-            // richTextBox2
+            // rcbActual
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(17, 241);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(380, 75);
-            this.richTextBox2.TabIndex = 1;
-            this.richTextBox2.Text = "";
+            this.rcbActual.Location = new System.Drawing.Point(17, 241);
+            this.rcbActual.Name = "rcbActual";
+            this.rcbActual.Size = new System.Drawing.Size(380, 75);
+            this.rcbActual.TabIndex = 1;
+            this.rcbActual.Text = "";
             // 
-            // richTextBox1
+            // rcbAnterior
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(17, 79);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(380, 75);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
+            this.rcbAnterior.Location = new System.Drawing.Point(17, 79);
+            this.rcbAnterior.Name = "rcbAnterior";
+            this.rcbAnterior.Size = new System.Drawing.Size(380, 75);
+            this.rcbAnterior.TabIndex = 0;
+            this.rcbAnterior.Text = "";
             // 
             // lblMedico
             // 
@@ -266,8 +267,8 @@
         private System.Windows.Forms.GroupBox gpbAtencion;
         private System.Windows.Forms.Label lblAnterior;
         private System.Windows.Forms.Label lblActual;
-        private System.Windows.Forms.RichTextBox richTextBox2;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox rcbActual;
+        private System.Windows.Forms.RichTextBox rcbAnterior;
         private System.Windows.Forms.Label lblMedico;
         private System.Windows.Forms.Label lblPaciente;
         private System.Windows.Forms.Label lblHistorial;

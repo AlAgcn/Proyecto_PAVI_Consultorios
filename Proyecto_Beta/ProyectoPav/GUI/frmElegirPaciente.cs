@@ -21,7 +21,7 @@ namespace ProyectoPav
         private void cmdConsultar_Click(object sender, EventArgs e)
         {
           dgvPacientes.Rows.Clear();
-          dgvPacientes.DataSource = oDatos.consultaTabla_parametros(new frmElegirPaciente().Parametros(txtNombre, txtHistoria, txtDni, txtApellido, "Nombre", "Historia_Clinica", "DNI", "Apellido"));
+          dgvPacientes.DataSource = oDatos.consultaTabla_parametros(new frmElegirPaciente().Parametros(txtNombre, txtHistoria, txtDni, txtApellido, "Nombre", "Historia_Clinica", "dni", "Apellido"));
         }
         private string Parametros(TextBox txt1,TextBox txt2, TextBox txt3, TextBox txt4,string par1, string par2, string par3,string par4)
         {
@@ -34,11 +34,11 @@ namespace ProyectoPav
             }
             if (!(txt3.Text == string.Empty))
             {
-                str += " AND " + par3 + "='" + txt3.Text + "'";
+                str += " AND " + par3 + "=" + txt3.Text + "";
             }
             if (!(txt4.Text == string.Empty))
             {
-                str += " AND " + par4 + "='" + txt4.Text + "'";
+                str += " AND " + par4 + "=" + txt4.Text + "";
             }
             return str;
 
