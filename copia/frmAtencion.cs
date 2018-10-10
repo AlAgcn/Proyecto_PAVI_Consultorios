@@ -26,8 +26,8 @@ namespace ProyectoPav
         FunctionHelper funcioncin = new FunctionHelper();
         private void frmAtencion_Load(object sender, EventArgs e)
         {
-            lblPaciente.Text = NOM;
-            lblHistorial.Text = HISTO.ToString();
+            lblPaciente.Text = "Nombre del paciente: "+NOM;
+            lblHistorial.Text = "Numero de HC: "+HISTO.ToString();
             gpbAtencion.Text = "Motivos";
             lblAnterior.Text = "Motivos anteriores";
             lblActual.Text = "Motivos actuales";
@@ -160,6 +160,11 @@ namespace ProyectoPav
             txtDuracion.Visible = false;
             txtFrecuencia.Visible = false;
             dgvMedicamentos.Visible = false;
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            dgvMedicamentos.Rows.Add(new BDHelper().consultaTabla_parametros("SELECT farmaco FROM Medicamentos WHERE id="+lsbMedicamentos.SelectedValue).Rows[0][0].ToString(), txtDuracion.Text, txtFrecuencia.Text);
         }
 
     }
