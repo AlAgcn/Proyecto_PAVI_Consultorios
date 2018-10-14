@@ -31,7 +31,7 @@ namespace ProyectoPav
 
         public BDHelper()
         {
-            cadConexion = @"Data Source=(localdb)\MiBase;Initial Catalog=MyFirst;Integrated Security=True";
+            cadConexion = @"Data Source=maquis;Initial Catalog=3;User ID=avisuales1;password=avisuales1";
             conexion = new SqlConnection();
             comando = new SqlCommand();
 

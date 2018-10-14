@@ -34,5 +34,13 @@ namespace ProyectoPav
             lista.ValueMember = value;
             lista.DisplayMember = display;
         }
+
+        public void cargarListaSinEstado(ListBox lista, string tabla, string value, string display)
+        {
+            string sql_cmd = "SELECT * FROM " + tabla;
+            lista.DataSource = oDatos.consultaTabla_parametros(sql_cmd);
+            lista.ValueMember = value;
+            lista.DisplayMember = display;
+        }
     }
 }

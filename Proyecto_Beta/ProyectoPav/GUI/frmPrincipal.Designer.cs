@@ -31,7 +31,7 @@
             this.btnPacientes = new System.Windows.Forms.Button();
             this.btnHistoriaClinica = new System.Windows.Forms.Button();
             this.btnUsuario = new System.Windows.Forms.Button();
-            this.btnConsultas = new System.Windows.Forms.Button();
+            this.btnAtencion = new System.Windows.Forms.Button();
             this.btnMedicos = new System.Windows.Forms.Button();
             this.btnMedicamentos = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -71,18 +71,18 @@
             this.btnUsuario.UseVisualStyleBackColor = false;
             this.btnUsuario.Click += new System.EventHandler(this.btnUsuario_Click_1);
             // 
-            // btnConsultas
+            // btnAtencion
             // 
-            this.btnConsultas.BackColor = System.Drawing.Color.SeaGreen;
-            this.btnConsultas.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsultas.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnConsultas.Location = new System.Drawing.Point(355, 199);
-            this.btnConsultas.Name = "btnConsultas";
-            this.btnConsultas.Size = new System.Drawing.Size(176, 72);
-            this.btnConsultas.TabIndex = 3;
-            this.btnConsultas.Text = "Consultas";
-            this.btnConsultas.UseVisualStyleBackColor = false;
-            this.btnConsultas.Click += new System.EventHandler(this.btnConsultas_Click);
+            this.btnAtencion.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnAtencion.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtencion.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnAtencion.Location = new System.Drawing.Point(355, 199);
+            this.btnAtencion.Name = "btnAtencion";
+            this.btnAtencion.Size = new System.Drawing.Size(176, 72);
+            this.btnAtencion.TabIndex = 3;
+            this.btnAtencion.Text = "Atencion";
+            this.btnAtencion.UseVisualStyleBackColor = false;
+            this.btnAtencion.Click += new System.EventHandler(this.btnConsultas_Click);
             // 
             // btnMedicos
             // 
@@ -100,7 +100,7 @@
             // 
             this.btnMedicamentos.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btnMedicamentos.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Italic);
-            this.btnMedicamentos.Location = new System.Drawing.Point(597, 32);
+            this.btnMedicamentos.Location = new System.Drawing.Point(630, 44);
             this.btnMedicamentos.Name = "btnMedicamentos";
             this.btnMedicamentos.Size = new System.Drawing.Size(176, 72);
             this.btnMedicamentos.TabIndex = 5;
@@ -115,7 +115,7 @@
             this.ClientSize = new System.Drawing.Size(839, 336);
             this.Controls.Add(this.btnMedicamentos);
             this.Controls.Add(this.btnMedicos);
-            this.Controls.Add(this.btnConsultas);
+            this.Controls.Add(this.btnAtencion);
             this.Controls.Add(this.btnUsuario);
             this.Controls.Add(this.btnHistoriaClinica);
             this.Controls.Add(this.btnPacientes);
@@ -132,7 +132,7 @@
         private System.Windows.Forms.Button btnPacientes;
         private System.Windows.Forms.Button btnHistoriaClinica;
         private System.Windows.Forms.Button btnUsuario;
-        private System.Windows.Forms.Button btnConsultas;
+        private System.Windows.Forms.Button btnAtencion;
         private System.Windows.Forms.Button btnMedicos;
         private System.Windows.Forms.Button btnMedicamentos;
 

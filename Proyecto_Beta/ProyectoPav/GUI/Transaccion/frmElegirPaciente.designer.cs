@@ -32,6 +32,10 @@
             this.cmdSalir = new System.Windows.Forms.Button();
             this.cmdDetalle = new System.Windows.Forms.Button();
             this.dgvPacientes = new System.Windows.Forms.DataGridView();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dni = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hclinica = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtHistoria = new System.Windows.Forms.TextBox();
             this.txtDni = new System.Windows.Forms.TextBox();
@@ -40,10 +44,6 @@
             this.lblNombrePaciente = new System.Windows.Forms.Label();
             this.lblHistoClinica = new System.Windows.Forms.Label();
             this.lblDNI = new System.Windows.Forms.Label();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dni = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hclinica = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPacientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,7 +73,7 @@
             this.cmdDetalle.Name = "cmdDetalle";
             this.cmdDetalle.Size = new System.Drawing.Size(130, 23);
             this.cmdDetalle.TabIndex = 10;
-            this.cmdDetalle.Text = "Ver Paciente";
+            this.cmdDetalle.Text = "Agregar Atencion";
             this.cmdDetalle.UseVisualStyleBackColor = true;
             this.cmdDetalle.Click += new System.EventHandler(this.cmdDetalle_Click);
             // 
@@ -87,8 +87,31 @@
             this.hclinica});
             this.dgvPacientes.Location = new System.Drawing.Point(24, 150);
             this.dgvPacientes.Name = "dgvPacientes";
-            this.dgvPacientes.Size = new System.Drawing.Size(588, 150);
+            this.dgvPacientes.Size = new System.Drawing.Size(594, 150);
             this.dgvPacientes.TabIndex = 9;
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.Width = 150;
+            // 
+            // Apellido
+            // 
+            this.Apellido.HeaderText = "Apellido";
+            this.Apellido.Name = "Apellido";
+            this.Apellido.Width = 150;
+            // 
+            // dni
+            // 
+            this.dni.HeaderText = "DNI";
+            this.dni.Name = "dni";
+            this.dni.Width = 150;
+            // 
+            // hclinica
+            // 
+            this.hclinica.HeaderText = "Historia Clinica";
+            this.hclinica.Name = "hclinica";
             // 
             // txtNombre
             // 
@@ -153,26 +176,6 @@
             this.lblDNI.Size = new System.Drawing.Size(26, 13);
             this.lblDNI.TabIndex = 4;
             this.lblDNI.Text = "DNI";
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            // 
-            // Apellido
-            // 
-            this.Apellido.HeaderText = "Apellido";
-            this.Apellido.Name = "Apellido";
-            // 
-            // dni
-            // 
-            this.dni.HeaderText = "DNI";
-            this.dni.Name = "dni";
-            // 
-            // hclinica
-            // 
-            this.hclinica.HeaderText = "Historia Clinica";
-            this.hclinica.Name = "hclinica";
             // 
             // frmElegirPaciente
             // 

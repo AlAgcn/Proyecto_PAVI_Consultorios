@@ -44,32 +44,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\AtencionHelper.cs" />
+    <Compile Include="GUI\Transaccion\frmAtencion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Transaccion\frmAtencion.designer.cs">
+      <DependentUpon>frmAtencion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Performance\clsDetalleMedicamento.cs" />
+    <Compile Include="Performance\clcPlan.cs" />
     <Compile Include="DAO\HistorialClinicoHelper.cs" />
     <Compile Include="DAO\PacienteHelper.cs" />
     <Compile Include="DAO\UsuarioHelper.cs" />
-    <Compile Include="GUI\frmMedicamentos.cs">
+    <Compile Include="GUI\Transaccion\frmMedicamentos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\frmMedicamentos.Designer.cs">
+    <Compile Include="GUI\Transaccion\frmMedicamentos.Designer.cs">
       <DependentUpon>frmMedicamentos.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\frmPaciente.cs">
+    <Compile Include="GUI\Personas\frmPaciente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\frmPaciente.Designer.cs">
+    <Compile Include="GUI\Personas\frmPaciente.Designer.cs">
       <DependentUpon>frmPaciente.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\frmElegirPaciente.cs">
+    <Compile Include="GUI\Transaccion\frmElegirPaciente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\frmElegirPaciente.designer.cs">
+    <Compile Include="GUI\Transaccion\frmElegirPaciente.designer.cs">
       <DependentUpon>frmElegirPaciente.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\frmAtencion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\frmAtencion.designer.cs">
-      <DependentUpon>frmAtencion.cs</DependentUpon>
     </Compile>
     <Compile Include="DAO\MedicoHelper.cs" />
     <Compile Include="DAO\MedicamentoHelper.cs" />
@@ -77,19 +80,19 @@
     <Compile Include="Performance\clsPaciente.cs" />
     <Compile Include="Performance\clsAtencionMedica.cs" />
     <Compile Include="DAO\FunctionHelper.cs" />
-    <Compile Include="GUI\frmMedico.cs">
+    <Compile Include="GUI\Personas\frmMedico.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\frmMedico.Designer.cs">
+    <Compile Include="GUI\Personas\frmMedico.Designer.cs">
       <DependentUpon>frmMedico.cs</DependentUpon>
     </Compile>
     <Compile Include="Performance\clsHistorialClinico.cs" />
     <Compile Include="Performance\clsMedico.cs" />
     <Compile Include="DAO\BDHelper.cs" />
-    <Compile Include="GUI\frmUsuarios.cs">
+    <Compile Include="GUI\Personas\frmUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\frmUsuarios.Designer.cs">
+    <Compile Include="GUI\Personas\frmUsuarios.Designer.cs">
       <DependentUpon>frmUsuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\frmLogIn.cs">
@@ -107,28 +110,28 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Performance\clsUsuario.cs" />
-    <EmbeddedResource Include="GUI\frmMedicamentos.resx">
-      <DependentUpon>frmMedicamentos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\frmElegirPaciente.resx">
-      <DependentUpon>frmElegirPaciente.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\frmAtencion.resx">
+    <EmbeddedResource Include="GUI\Transaccion\frmAtencion.resx">
       <DependentUpon>frmAtencion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\frmMedico.resx">
+    <EmbeddedResource Include="GUI\Transaccion\frmMedicamentos.resx">
+      <DependentUpon>frmMedicamentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Transaccion\frmElegirPaciente.resx">
+      <DependentUpon>frmElegirPaciente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Personas\frmMedico.resx">
       <DependentUpon>frmMedico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmLogIn.resx">
       <DependentUpon>frmLogIn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\frmPaciente.resx">
+    <EmbeddedResource Include="GUI\Personas\frmPaciente.resx">
       <DependentUpon>frmPaciente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\frmUsuarios.resx">
+    <EmbeddedResource Include="GUI\Personas\frmUsuarios.resx">
       <DependentUpon>frmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

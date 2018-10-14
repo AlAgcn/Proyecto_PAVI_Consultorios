@@ -20,7 +20,7 @@ namespace ProyectoPav
 
         private void cmdConsultar_Click(object sender, EventArgs e)
         {
-            string str = "SELECT Nombre,Apellido, dni, Historia_Clinica FROM PACIENTES WHERE 1=1";
+            string str = "SELECT Nombre,Apellido, dni, n_historiaClinica FROM PACIENTES WHERE 1=1";
             if (!(txtNombre.Text == string.Empty))
                 str += " AND Nomnbre='" + txtNombre.Text + "'";
             if (!(txtApellido.Text == string.Empty))
@@ -54,7 +54,7 @@ namespace ProyectoPav
 
         private void cmdDetalle_Click(object sender, EventArgs e)
         {
-            string str = dgvPacientes.CurrentRow.Cells[3].Value.ToString();
+            string str = dgvPacientes.CurrentRow.Cells[0].Value.ToString();
             int histo = int.Parse(dgvPacientes.CurrentRow.Cells[3].Value.ToString());
             frmAtencion form = new frmAtencion(str, histo);
             form.ShowDialog();
