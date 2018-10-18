@@ -122,7 +122,7 @@ id INT IDENTITY (0,1) not null,
 n_obrasocial varchar(15) not null
 )
 GO
-insret into Obras_Sociales (n_obrasocial) values ('No aplica')
+insert into Obras_Sociales (n_obrasocial) values ('No aplica')
 insert into Obras_Sociales (n_obrasocial) values ('OSDE')
 insert into Obras_Sociales (n_obrasocial) values ('APOS')
 insert into Obras_Sociales (n_obrasocial) values ('OSUNLaR')
