@@ -13,7 +13,6 @@ namespace ProyectoPav
         public string Apellido { set; get; }
         public int  Id { set; get; }
         public DateTime  Fecha_Entrada { set; get; }
-        public DateTime  Fecha_Egreso { set; get; }
         public int Id_Usuario { set; get; }
         
     }

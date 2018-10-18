@@ -166,6 +166,10 @@ namespace ProyectoPav
         {
             dgvMedicamentos.Rows.Add(new BDHelper().consultaTabla_parametros("SELECT farmaco FROM Medicamentos WHERE id="+lsbMedicamentos.SelectedValue).Rows[0][0].ToString(), txtDuracion.Text, txtFrecuencia.Text);
         }
+        private Boolean validarTODO()
+        {
+            return true;
+        }
 
     }
 }

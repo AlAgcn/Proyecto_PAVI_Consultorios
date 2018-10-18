@@ -10,32 +10,35 @@ namespace ProyectoPav
 {
     class BDHelper
     {
+        enum TipoConexion
+        { comun, transaccion}
+
+        enum EstadoTransaccion
+        { exito, fracaso}
+
+        private static BDHelper instance;
         private string cadConexion;
         private SqlConnection conexion;
         private SqlCommand comando;
+        private SqlTransaction transaccion;
+        private TipoConexion miTipo = TipoConexion.comun;
+        private EstadoTransaccion miEstado = EstadoTransaccion.exito;
+
         public string CadConexion
         {
             get { return cadConexion; }
             set { cadConexion = value; }
         }
-        public SqlConnection  Conexion
-        {
-            get { return conexion; }
-            set { conexion = value; }
-        }
-        public SqlCommand Comando
-        {
-            get { return comando; }
-            set { comando = value; }
-        }
+       
 
         public BDHelper()
         {
-            cadConexion = @"Data Source=maquis;Initial Catalog=3;User ID=avisuales1;password=avisuales1";
+            cadConexion = @"Data Source=(localdb)\MiBase;Initial Catalog=MyFirst;Integrated Security=True";
             conexion = new SqlConnection();
             comando = new SqlCommand();
-
         }
+
+
         private void conectar()
         {
             conexion = new SqlConnection();
@@ -45,10 +48,21 @@ namespace ProyectoPav
             comando.Connection = conexion;
             comando.CommandType = CommandType.Text;
         }
-        private void desconectar()
+
+
+        public void desconectar()
         {
-            conexion.Close();
+            if (miTipo == TipoConexion.transaccion)
+                if (miEstado == EstadoTransaccion.exito)
+                    transaccion.Commit();
+                else
+                    transaccion.Rollback();
+         conexion.Close();
+         miTipo = TipoConexion.comun;
+
         }
+
+
         public DataTable llenar_Tabla(String nombreTabla)
         {
             DataTable tabla = new DataTable();
@@ -91,5 +105,30 @@ namespace ProyectoPav
             else
                 return false;
         }
-    }
+
+        public void ejecutarTransaccion(string sql_command)
+        {
+            try
+            {
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = sql_command;
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+                miEstado = EstadoTransaccion.fracaso;
+            }
+        }
+
+        public void conectarTransaccion()
+        {
+            conexion.ConnectionString = cadConexion;
+            conexion.Open();
+            miTipo = TipoConexion.transaccion;
+            transaccion = conexion.BeginTransaction();
+            comando.Transaction = transaccion;
+            miEstado = EstadoTransaccion.exito;
+            comando.Connection = conexion;
+        }
+   }
 }

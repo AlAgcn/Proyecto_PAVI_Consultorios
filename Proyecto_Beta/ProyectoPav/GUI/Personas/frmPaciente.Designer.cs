@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtObraSocial = new System.Windows.Forms.TextBox();
             this.txtDNI = new System.Windows.Forms.TextBox();
             this.txtNumeroDeSocio = new System.Windows.Forms.TextBox();
             this.txtApellido = new System.Windows.Forms.TextBox();
@@ -50,17 +49,13 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.cboObraSocial = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
-            // 
-            // txtObraSocial
-            // 
-            this.txtObraSocial.Location = new System.Drawing.Point(759, 110);
-            this.txtObraSocial.Name = "txtObraSocial";
-            this.txtObraSocial.Size = new System.Drawing.Size(162, 20);
-            this.txtObraSocial.TabIndex = 11;
             // 
             // txtDNI
             // 
+            this.txtDNI.BackColor = System.Drawing.SystemColors.Window;
+            this.txtDNI.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtDNI.Location = new System.Drawing.Point(144, 147);
             this.txtDNI.Name = "txtDNI";
             this.txtDNI.Size = new System.Drawing.Size(142, 20);
@@ -68,7 +63,7 @@
             // 
             // txtNumeroDeSocio
             // 
-            this.txtNumeroDeSocio.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.txtNumeroDeSocio.BackColor = System.Drawing.SystemColors.Window;
             this.txtNumeroDeSocio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNumeroDeSocio.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtNumeroDeSocio.Location = new System.Drawing.Point(759, 170);
@@ -78,7 +73,7 @@
             // 
             // txtApellido
             // 
-            this.txtApellido.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.txtApellido.BackColor = System.Drawing.SystemColors.Window;
             this.txtApellido.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtApellido.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtApellido.Location = new System.Drawing.Point(144, 100);
@@ -88,6 +83,8 @@
             // 
             // txtNombre
             // 
+            this.txtNombre.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNombre.Location = new System.Drawing.Point(144, 53);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(142, 20);
@@ -95,6 +92,8 @@
             // 
             // txtTelefono
             // 
+            this.txtTelefono.BackColor = System.Drawing.SystemColors.Window;
+            this.txtTelefono.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTelefono.Location = new System.Drawing.Point(144, 200);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(142, 20);
@@ -102,7 +101,7 @@
             // 
             // txtDomicilio
             // 
-            this.txtDomicilio.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.txtDomicilio.BackColor = System.Drawing.SystemColors.Window;
             this.txtDomicilio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtDomicilio.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtDomicilio.Location = new System.Drawing.Point(759, 230);
@@ -112,8 +111,8 @@
             // 
             // dtpNacimiento
             // 
-            this.dtpNacimiento.CustomFormat = "yyyyMMdd";
-            this.dtpNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpNacimiento.CustomFormat = "";
+            this.dtpNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpNacimiento.Location = new System.Drawing.Point(759, 50);
             this.dtpNacimiento.Name = "dtpNacimiento";
             this.dtpNacimiento.Size = new System.Drawing.Size(162, 20);
@@ -283,12 +282,21 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // cboObraSocial
+            // 
+            this.cboObraSocial.FormattingEnabled = true;
+            this.cboObraSocial.Location = new System.Drawing.Point(759, 111);
+            this.cboObraSocial.Name = "cboObraSocial";
+            this.cboObraSocial.Size = new System.Drawing.Size(162, 21);
+            this.cboObraSocial.TabIndex = 22;
+            // 
             // frmPaciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ProyectoPav.Properties.Resources._8714750_image;
             this.ClientSize = new System.Drawing.Size(947, 388);
+            this.Controls.Add(this.cboObraSocial);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnCancelar);
@@ -310,7 +318,6 @@
             this.Controls.Add(this.txtApellido);
             this.Controls.Add(this.txtNumeroDeSocio);
             this.Controls.Add(this.txtDNI);
-            this.Controls.Add(this.txtObraSocial);
             this.Name = "frmPaciente";
             this.Text = "frmPaciente";
             this.Load += new System.EventHandler(this.frmPaciente_Load);
@@ -321,7 +328,6 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtObraSocial;
         private System.Windows.Forms.TextBox txtDNI;
         private System.Windows.Forms.TextBox txtNumeroDeSocio;
         private System.Windows.Forms.TextBox txtApellido;
@@ -343,5 +349,6 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.ComboBox cboObraSocial;
     }
 }

@@ -44,7 +44,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DAO\AtencionHelper.cs" />
+    <Compile Include="frmAtencion1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAtencion1.Designer.cs">
+      <DependentUpon>frmAtencion1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAO\DAO Transaccion\AtencionHelper.cs" />
     <Compile Include="GUI\Transaccion\frmAtencion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -53,9 +59,9 @@
     </Compile>
     <Compile Include="Performance\clsDetalleMedicamento.cs" />
     <Compile Include="Performance\clcPlan.cs" />
-    <Compile Include="DAO\HistorialClinicoHelper.cs" />
-    <Compile Include="DAO\PacienteHelper.cs" />
-    <Compile Include="DAO\UsuarioHelper.cs" />
+    <Compile Include="DAO\DAO Transaccion\HistorialClinicoHelper.cs" />
+    <Compile Include="DAO\DAO Personas\PacienteHelper.cs" />
+    <Compile Include="DAO\DAO Personas\UsuarioHelper.cs" />
     <Compile Include="GUI\Transaccion\frmMedicamentos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,10 +80,10 @@
     <Compile Include="GUI\Transaccion\frmElegirPaciente.designer.cs">
       <DependentUpon>frmElegirPaciente.cs</DependentUpon>
     </Compile>
-    <Compile Include="DAO\MedicoHelper.cs" />
-    <Compile Include="DAO\MedicamentoHelper.cs" />
+    <Compile Include="DAO\DAO Personas\MedicoHelper.cs" />
+    <Compile Include="DAO\DAO Transaccion\MedicamentoHelper.cs" />
     <Compile Include="Performance\clsMedicamento.cs" />
-    <Compile Include="Performance\clsPaciente.cs" />
+    <Compile Include="Performance\Entidades\clsPaciente.cs" />
     <Compile Include="Performance\clsAtencionMedica.cs" />
     <Compile Include="DAO\FunctionHelper.cs" />
     <Compile Include="GUI\Personas\frmMedico.cs">
@@ -87,7 +93,7 @@
       <DependentUpon>frmMedico.cs</DependentUpon>
     </Compile>
     <Compile Include="Performance\clsHistorialClinico.cs" />
-    <Compile Include="Performance\clsMedico.cs" />
+    <Compile Include="Performance\Entidades\clsMedico.cs" />
     <Compile Include="DAO\BDHelper.cs" />
     <Compile Include="GUI\Personas\frmUsuarios.cs">
       <SubType>Form</SubType>
@@ -109,7 +115,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Performance\clsUsuario.cs" />
+    <Compile Include="Performance\Entidades\clsUsuario.cs" />
+    <EmbeddedResource Include="frmAtencion1.resx">
+      <DependentUpon>frmAtencion1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Transaccion\frmAtencion.resx">
       <DependentUpon>frmAtencion.cs</DependentUpon>
     </EmbeddedResource>

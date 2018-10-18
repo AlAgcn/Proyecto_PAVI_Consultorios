@@ -25,6 +25,7 @@ namespace ProyectoPav
         private void frmPaciente_Load(object sender, EventArgs e)
         {
             deshabilitarCampos();
+            new FunctionHelper().llenarCombo(cboObraSocial, "Obras_Sociales", "n_obrasocial", "id");
         }
 
         private void deshabilitarCampos()
@@ -32,7 +33,7 @@ namespace ProyectoPav
             txtNombre.Enabled = false;
             txtApellido.Enabled = false;
             txtDNI.Enabled = false;
-            txtObraSocial.Enabled = false;
+            cboObraSocial.Enabled = false;
             txtNumeroDeSocio.Enabled = false;
             txtTelefono.Enabled = false;
             txtDomicilio.Enabled = false;
@@ -46,7 +47,7 @@ namespace ProyectoPav
             txtNombre.Enabled = true;
             txtApellido.Enabled = true;
             txtDNI.Enabled = true;
-            txtObraSocial.Enabled = true;
+            cboObraSocial.Enabled = true;
             txtNumeroDeSocio.Enabled = true;
             txtTelefono.Enabled = true;
             txtDomicilio.Enabled = true;
@@ -61,7 +62,7 @@ namespace ProyectoPav
             txtApellido.ResetText();
             txtDNI.ResetText();
             txtTelefono.ResetText();
-            txtObraSocial.ResetText();
+            cboObraSocial.ResetText();
             txtNumeroDeSocio.ResetText();
             txtDomicilio.ResetText();
             dtpNacimiento.ResetText();
@@ -83,7 +84,7 @@ namespace ProyectoPav
             paciente.dni = int.Parse(txtDNI.Text);
             paciente.telefono = int.Parse(txtTelefono.Text);
             paciente.nacimiento = dtpNacimiento.Text;
-            paciente.obra_Social = txtObraSocial.Text;
+            paciente.obra_Social = int.Parse(cboObraSocial.SelectedValue.ToString());
             paciente.nro_Afiliado = int.Parse(txtNumeroDeSocio.Text);
             paciente.domicilio = txtDomicilio.Text;
             if (pacienteHelper.agregarPaciente(paciente))
@@ -167,7 +168,7 @@ namespace ProyectoPav
             paci.domicilio = txtDomicilio.Text;
             paci.nombre=txtNombre.Text;
             paci.nro_Afiliado = int.Parse(txtNumeroDeSocio.Text);
-            paci.obra_Social = txtObraSocial.Text;
+            paci.obra_Social = int.Parse(cboObraSocial.SelectedValue.ToString());
             paci.telefono = int.Parse(txtTelefono.Text);
             PacienteHelper pacih = new PacienteHelper();
             pacih.actualizarPaciente(paci);

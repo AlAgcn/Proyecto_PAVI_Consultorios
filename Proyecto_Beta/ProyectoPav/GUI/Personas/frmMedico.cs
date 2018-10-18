@@ -59,7 +59,7 @@ namespace ProyectoPav
             string sql = "INSERT INTO Medicos (Nombre, Apellido, Fecha_Ingreso, Estado) values ('" +
                           txtNombre.Text + "','" +
                           txtApellido.Text + "', '" +
-                          dtpFecha.Text + "', 'S')";
+                          dtpFecha.Value.ToString("yyyyMMdd") + "', 'S')";
             if (helper.consultaSQL(sql) > 0)
             {
                 MessageBox.Show("Medico agregado", "Nuevo Medico", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);

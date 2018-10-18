@@ -15,7 +15,7 @@ namespace ProyectoPav
         public string Diagnostico { set; get; }
         public string Plan_Terapeutico { set; get; }
         public string Observaciones { set; get; }
-        public DateTime Fecha { set; get; }
+        public string Fecha { set; get; }
     }
 
 }

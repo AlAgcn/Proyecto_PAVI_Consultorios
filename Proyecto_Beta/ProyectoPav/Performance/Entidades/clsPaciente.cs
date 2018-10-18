@@ -13,12 +13,12 @@ namespace ProyectoPav
         public string apellido { set; get; }
         public int dni { set; get; }
         public string domicilio { set; get; }
-        public string obra_Social { set; get; }
+        public int obra_Social { set; get; }
         public int nro_Afiliado { set; get; }
         public int telefono { set; get; }
         public String nacimiento { set; get; }
 
-        public clsPaciente(int hclinica, string nom, string apell, int DNI, string dom, string osocial, int nroafiliado, int tel, string nac)
+        public clsPaciente(int hclinica, string nom, string apell, int DNI, string dom, int osocial, int nroafiliado, int tel, string nac)
         {
             historiaClinica = hclinica;
             nombre = nom;
@@ -38,7 +38,7 @@ namespace ProyectoPav
             apellido = apell;
             dni = DNI;
             domicilio = dom;
-            obra_Social = null;
+            obra_Social = 0;
             nro_Afiliado = 0;
             telefono = tel;
             nacimiento = nac;

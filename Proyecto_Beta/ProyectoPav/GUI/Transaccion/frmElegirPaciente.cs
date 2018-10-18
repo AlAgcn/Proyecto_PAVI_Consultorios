@@ -45,7 +45,7 @@ namespace ProyectoPav
         {
             for (int i=0; i<data.Rows.Count; i++)
             {
-                grilla.Rows.Add(data.Rows[i]["Nombre"], 
+                grilla.Rows.Add(data.Rows[i]["Nombre"],
                                 data.Rows[i]["Apellido"], 
                                 data.Rows[i]["dni"], 
                                 data.Rows[i]["n_HistoriaClinica"]);
@@ -54,9 +54,9 @@ namespace ProyectoPav
 
         private void cmdDetalle_Click(object sender, EventArgs e)
         {
-            string str = dgvPacientes.CurrentRow.Cells[0].Value.ToString();
+            int id_paciente = int.Parse(dgvPacientes.CurrentRow.Cells[2].Value.ToString());
             int histo = int.Parse(dgvPacientes.CurrentRow.Cells[3].Value.ToString());
-            frmAtencion form = new frmAtencion(str, histo);
+            frmAtencion1 form = new frmAtencion1(id_paciente);
             form.ShowDialog();
         }
 
