@@ -127,3 +127,11 @@ insert into Obras_Sociales (n_obrasocial) values ('OSDE')
 insert into Obras_Sociales (n_obrasocial) values ('APOS')
 insert into Obras_Sociales (n_obrasocial) values ('OSUNLaR')
 insert into Obras_Sociales (n_obrasocial) values ('PAMI')
+GO
+
+CREATE table Plan_Terapeutico
+(
+id INT IDENTITY,
+id_dieta int,
+)
+GO
