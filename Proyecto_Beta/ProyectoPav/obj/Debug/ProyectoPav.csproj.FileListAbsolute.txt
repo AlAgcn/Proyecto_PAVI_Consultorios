@@ -102,3 +102,32 @@ C:\Users\Familia Correa\Desktop\Proyecto_Beta\ProyectoPav\obj\Debug\ProyectoPav.
 C:\Users\Familia Correa\Desktop\Proyecto_Beta\ProyectoPav\bin\Debug\ProyectoPav.exe
 C:\Users\Familia Correa\Desktop\Proyecto_Beta\ProyectoPav\bin\Debug\ProyectoPav.pdb
 C:\Users\Familia Correa\Desktop\Proyecto_Beta\ProyectoPav\obj\Debug\ProyectoPav.frmAtencion1.resources
+D:\Proyecto_Beta\ProyectoPav\bin\Debug\ProyectoPav.exe
+D:\Proyecto_Beta\ProyectoPav\bin\Debug\ProyectoPav.pdb
+D:\Proyecto_Beta\ProyectoPav\obj\Debug\ProyectoPav.csprojResolveAssemblyReference.cache
+D:\Proyecto_Beta\ProyectoPav\obj\Debug\ProyectoPav.frmAtencion1.resources
+D:\Proyecto_Beta\ProyectoPav\obj\Debug\ProyectoPav.frmMedicamentos.resources
+D:\Proyecto_Beta\ProyectoPav\obj\Debug\ProyectoPav.frmElegirPaciente.resources
+D:\Proyecto_Beta\ProyectoPav\obj\Debug\ProyectoPav.frmMedico.resources
+D:\Proyecto_Beta\ProyectoPav\obj\Debug\ProyectoPav.frmLogIn.resources
+D:\Proyecto_Beta\ProyectoPav\obj\Debug\ProyectoPav.frmPaciente.resources
+D:\Proyecto_Beta\ProyectoPav\obj\Debug\ProyectoPav.frmPrincipal.resources
+D:\Proyecto_Beta\ProyectoPav\obj\Debug\ProyectoPav.frmUsuarios.resources
+D:\Proyecto_Beta\ProyectoPav\obj\Debug\ProyectoPav.Properties.Resources.resources
+D:\Proyecto_Beta\ProyectoPav\obj\Debug\ProyectoPav.csproj.GenerateResource.Cache
+G:\Proyecto_Beta\ProyectoPav\bin\Debug\ProyectoPav.exe.config
+G:\Proyecto_Beta\ProyectoPav\obj\Debug\ProyectoPav.exe
+G:\Proyecto_Beta\ProyectoPav\obj\Debug\ProyectoPav.pdb
+G:\Proyecto_Beta\ProyectoPav\bin\Debug\ProyectoPav.exe
+G:\Proyecto_Beta\ProyectoPav\bin\Debug\ProyectoPav.pdb
+G:\Proyecto_Beta\ProyectoPav\obj\Debug\ProyectoPav.csprojResolveAssemblyReference.cache
+G:\Proyecto_Beta\ProyectoPav\obj\Debug\ProyectoPav.frmAtencion1.resources
+G:\Proyecto_Beta\ProyectoPav\obj\Debug\ProyectoPav.frmMedicamentos.resources
+G:\Proyecto_Beta\ProyectoPav\obj\Debug\ProyectoPav.frmElegirPaciente.resources
+G:\Proyecto_Beta\ProyectoPav\obj\Debug\ProyectoPav.frmMedico.resources
+G:\Proyecto_Beta\ProyectoPav\obj\Debug\ProyectoPav.frmLogIn.resources
+G:\Proyecto_Beta\ProyectoPav\obj\Debug\ProyectoPav.frmPaciente.resources
+G:\Proyecto_Beta\ProyectoPav\obj\Debug\ProyectoPav.frmPrincipal.resources
+G:\Proyecto_Beta\ProyectoPav\obj\Debug\ProyectoPav.frmUsuarios.resources
+G:\Proyecto_Beta\ProyectoPav\obj\Debug\ProyectoPav.Properties.Resources.resources
+G:\Proyecto_Beta\ProyectoPav\obj\Debug\ProyectoPav.csproj.GenerateResource.Cache

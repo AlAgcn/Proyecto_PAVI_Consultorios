@@ -33,7 +33,7 @@ namespace ProyectoPav
 
         public BDHelper()
         {
-            cadConexion = @"Data Source=(localdb)\MiBase;Initial Catalog=MyFirst;Integrated Security=True";
+            cadConexion = @"Data Source=ALIBOOK\MISERVIDOR;Initial Catalog=Consultorio;Integrated Security=True";
             conexion = new SqlConnection();
             comando = new SqlCommand();
         }
@@ -59,7 +59,6 @@ namespace ProyectoPav
                     transaccion.Rollback();
          conexion.Close();
          miTipo = TipoConexion.comun;
-
         }
 
 

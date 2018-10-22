@@ -46,7 +46,6 @@ namespace ProyectoPav
 
         public clsPaciente()
         {
-            // TODO: Complete member initialization
         }
     }
 }

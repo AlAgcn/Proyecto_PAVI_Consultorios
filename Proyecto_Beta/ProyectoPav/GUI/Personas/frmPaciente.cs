@@ -12,6 +12,7 @@ namespace ProyectoPav
 {
     public partial class frmPaciente : Form
     {
+        BDHelper oDatos = new BDHelper();
         clsPaciente paciente;
         PacienteHelper pacienteHelper = new PacienteHelper();
         bool newp = false;
@@ -87,8 +88,16 @@ namespace ProyectoPav
             paciente.obra_Social = int.Parse(cboObraSocial.SelectedValue.ToString());
             paciente.nro_Afiliado = int.Parse(txtNumeroDeSocio.Text);
             paciente.domicilio = txtDomicilio.Text;
-            if (pacienteHelper.agregarPaciente(paciente))
-                MessageBox.Show("Paciente Agredado", "Añadir Paciente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+            oDatos.conectarTransaccion();
+
+            pacienteHelper.agregarPaciente(paciente);
+            string sql2 = "declare @hc int set @hc = IDENT_CURRENT ('Pacientes')"
+            + " insert into Historias_Clinicas (cod, id_paciente) values (@hc," + paciente.dni.ToString() + ")";
+            oDatos.ejecutarTransaccion(sql2);
+            oDatos.desconectar();
+
+                //MessageBox.Show("Paciente Agredado", "Añadir Paciente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
         private void eliminarPaciente()

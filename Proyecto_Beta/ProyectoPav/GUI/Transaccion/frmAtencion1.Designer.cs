@@ -62,6 +62,9 @@
             this.rtbObservacionAns = new System.Windows.Forms.RichTextBox();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnGuardarTodo = new System.Windows.Forms.Button();
+            this.gpbDataPaciente = new System.Windows.Forms.GroupBox();
+            this.lblHistoriaClinica = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
             this.tbcAtencion.SuspendLayout();
             this.tbpMotivo.SuspendLayout();
             this.tbpRevision.SuspendLayout();
@@ -69,6 +72,7 @@
             this.tbpPlan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMedicamentos)).BeginInit();
             this.tbpObservacion.SuspendLayout();
+            this.gpbDataPaciente.SuspendLayout();
             this.SuspendLayout();
             // 
             // tbcAtencion
@@ -140,7 +144,7 @@
             // 
             this.rtbRevisionAns.BackColor = System.Drawing.Color.Silver;
             this.rtbRevisionAns.Enabled = false;
-            this.rtbRevisionAns.Location = new System.Drawing.Point(8, 3);
+            this.rtbRevisionAns.Location = new System.Drawing.Point(3, 3);
             this.rtbRevisionAns.Name = "rtbRevisionAns";
             this.rtbRevisionAns.Size = new System.Drawing.Size(244, 260);
             this.rtbRevisionAns.TabIndex = 14;
@@ -170,7 +174,7 @@
             // 
             this.rtbDiagnosticoAns.BackColor = System.Drawing.Color.Silver;
             this.rtbDiagnosticoAns.Enabled = false;
-            this.rtbDiagnosticoAns.Location = new System.Drawing.Point(6, 3);
+            this.rtbDiagnosticoAns.Location = new System.Drawing.Point(3, 3);
             this.rtbDiagnosticoAns.Name = "rtbDiagnosticoAns";
             this.rtbDiagnosticoAns.Size = new System.Drawing.Size(244, 260);
             this.rtbDiagnosticoAns.TabIndex = 14;
@@ -224,6 +228,7 @@
             this.btnAgregar.TabIndex = 12;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // lblLista
             // 
@@ -301,7 +306,7 @@
             this.frecuencia,
             this.duracion,
             this.laboratorio});
-            this.dgvMedicamentos.Location = new System.Drawing.Point(146, 113);
+            this.dgvMedicamentos.Location = new System.Drawing.Point(154, 116);
             this.dgvMedicamentos.Name = "dgvMedicamentos";
             this.dgvMedicamentos.Size = new System.Drawing.Size(442, 150);
             this.dgvMedicamentos.TabIndex = 0;
@@ -361,7 +366,7 @@
             // 
             this.rtbObservacionAns.BackColor = System.Drawing.Color.Silver;
             this.rtbObservacionAns.Enabled = false;
-            this.rtbObservacionAns.Location = new System.Drawing.Point(0, 0);
+            this.rtbObservacionAns.Location = new System.Drawing.Point(3, 3);
             this.rtbObservacionAns.Name = "rtbObservacionAns";
             this.rtbObservacionAns.Size = new System.Drawing.Size(244, 260);
             this.rtbObservacionAns.TabIndex = 0;
@@ -375,6 +380,7 @@
             this.btnSalir.TabIndex = 9;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnGuardarTodo
             // 
@@ -386,16 +392,47 @@
             this.btnGuardarTodo.UseVisualStyleBackColor = true;
             this.btnGuardarTodo.Click += new System.EventHandler(this.btnGuardarTodo_Click);
             // 
+            // gpbDataPaciente
+            // 
+            this.gpbDataPaciente.Controls.Add(this.lblHistoriaClinica);
+            this.gpbDataPaciente.Controls.Add(this.lblNombre);
+            this.gpbDataPaciente.Location = new System.Drawing.Point(0, 0);
+            this.gpbDataPaciente.Name = "gpbDataPaciente";
+            this.gpbDataPaciente.Size = new System.Drawing.Size(282, 100);
+            this.gpbDataPaciente.TabIndex = 11;
+            this.gpbDataPaciente.TabStop = false;
+            this.gpbDataPaciente.Text = "Datos del Paciente";
+            // 
+            // lblHistoriaClinica
+            // 
+            this.lblHistoriaClinica.AutoSize = true;
+            this.lblHistoriaClinica.Location = new System.Drawing.Point(12, 66);
+            this.lblHistoriaClinica.Name = "lblHistoriaClinica";
+            this.lblHistoriaClinica.Size = new System.Drawing.Size(35, 13);
+            this.lblHistoriaClinica.TabIndex = 1;
+            this.lblHistoriaClinica.Text = "label2";
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Location = new System.Drawing.Point(12, 26);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(35, 13);
+            this.lblNombre.TabIndex = 0;
+            this.lblNombre.Text = "label1";
+            // 
             // frmAtencion1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(672, 409);
+            this.Controls.Add(this.gpbDataPaciente);
             this.Controls.Add(this.btnGuardarTodo);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.tbcAtencion);
             this.Name = "frmAtencion1";
             this.Text = "Atencion1";
+            this.Load += new System.EventHandler(this.frmAtencion1_Load);
             this.tbcAtencion.ResumeLayout(false);
             this.tbpMotivo.ResumeLayout(false);
             this.tbpRevision.ResumeLayout(false);
@@ -404,6 +441,8 @@
             this.tbpPlan.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMedicamentos)).EndInit();
             this.tbpObservacion.ResumeLayout(false);
+            this.gpbDataPaciente.ResumeLayout(false);
+            this.gpbDataPaciente.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -444,5 +483,8 @@
         private System.Windows.Forms.RichTextBox rtbRevisionAns;
         private System.Windows.Forms.RichTextBox rtbDiagnostico;
         private System.Windows.Forms.RichTextBox rtbDiagnosticoAns;
+        private System.Windows.Forms.GroupBox gpbDataPaciente;
+        private System.Windows.Forms.Label lblHistoriaClinica;
+        private System.Windows.Forms.Label lblNombre;
     }
 }

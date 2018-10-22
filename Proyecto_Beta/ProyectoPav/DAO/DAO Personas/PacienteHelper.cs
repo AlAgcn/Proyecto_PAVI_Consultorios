@@ -10,17 +10,18 @@ namespace ProyectoPav
     class PacienteHelper
     {
         BDHelper helper = new BDHelper();
+
         private clsPaciente map_Pacient(DataRow row)
         {
             clsPaciente paci = new clsPaciente();
             paci.historiaClinica = int.Parse(row["n_HistoriaClinica"].ToString());
-            paci.nro_Afiliado = int.Parse(row["n_Afiliado"].ToString());
-            paci.dni = int.Parse(row["dni"].ToString());
-            paci.nacimiento = row["Fecha_Nacimiento"].ToString();
             paci.nombre = row["Nombre"].ToString();
             paci.apellido = row["Apellido"].ToString();
+            paci.dni = int.Parse(row["dni"].ToString());
+            paci.nacimiento = row["Fecha_Nacimiento"].ToString();
+            paci.obra_Social = int.Parse(row["id_obrasocial"].ToString());
+            paci.nro_Afiliado = int.Parse(row["n_Afiliado"].ToString());
             paci.domicilio = row["Domicilio"].ToString();
-            paci.obra_Social = int.Parse(row["Obra_Social"].ToString());
             paci.telefono = int.Parse(row["Telefono"].ToString());
             return paci;
 
@@ -58,12 +59,12 @@ namespace ProyectoPav
                 return null;
             }
         }
-        public bool agregarPaciente(clsPaciente paci)
+        public void agregarPaciente(clsPaciente paci)
         {
             string str_sql = "INSERT INTO Pacientes (Nombre,Apellido,dni,Fecha_Nacimiento,id_obrasocial,n_Afiliado,Domicilio,Telefono,Estado) values ";
             str_sql+="('"+paci.nombre+"','"+paci.apellido+"',"+paci.dni.ToString()+",'"+paci.nacimiento.ToString()+"','"+paci.obra_Social;
             str_sql += "'," + paci.nro_Afiliado.ToString() + ",'" + paci.domicilio + "'," + paci.telefono.ToString()+",'S')";
-            return (helper.consultaSQL(str_sql)==1);
+            helper.ejecutarTransaccion(str_sql);
 
         }
         public bool actualizarPaciente(clsPaciente paci)

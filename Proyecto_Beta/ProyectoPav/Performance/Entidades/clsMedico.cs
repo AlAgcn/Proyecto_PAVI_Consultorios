@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace ProyectoPav
 {
-
     class clsMedico
     {
         public string Nombre { set; get; }
@@ -16,5 +15,4 @@ namespace ProyectoPav
         public int Id_Usuario { set; get; }
         
     }
-
 }

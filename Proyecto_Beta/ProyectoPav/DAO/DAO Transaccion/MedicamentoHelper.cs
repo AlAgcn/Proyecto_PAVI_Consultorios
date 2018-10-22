@@ -25,5 +25,20 @@ namespace ProyectoPav
                         + "values ('" + medicine.Monodroga + "', '" + medicine.Farmaco + "', '" + medicine.Laboratorio + "')";
             return (helper.consultaSQL(sql) == 1);
         }
+
+        public clsMedicamento getByID(int id_med)
+        {
+            string sql = "Select * from Medicamentos where id=" + id_med.ToString();
+            DataTable medicine = new DataTable();
+            medicine = helper.consultaTabla_parametros(sql);
+            if (medicine.Rows.Count > 0)
+            {
+                clsMedicamento medic = new clsMedicamento();
+                medic = map_Medicamento(medicine.Rows[0]);
+                return medic;
+            }
+            else
+                return null;
+        }
     }
 }
