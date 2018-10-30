@@ -39,7 +39,7 @@ GO
 
 CREATE table Historias_Clinicas
 (
-cod INT IDENTITY(001, 1),
+cod INT,
 id_paciente INT not null,
 )
 GO
@@ -74,9 +74,9 @@ Apellido nchar(20) not null,
 dni bigint not null,
 Fecha_Nacimiento date not null,
 id_obraSocial int not null,
-n_Afiliado int,
+n_Afiliado bigint,
 Domicilio text,
-Telefono int,
+Telefono bigint,
 Estado varchar(1) not null
 )
 GO
