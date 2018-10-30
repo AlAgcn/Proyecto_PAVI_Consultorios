@@ -79,14 +79,20 @@
             // 
             // dgvPacientes
             // 
+            this.dgvPacientes.AllowUserToAddRows = false;
+            this.dgvPacientes.AllowUserToDeleteRows = false;
+            this.dgvPacientes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.dgvPacientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPacientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Nombre,
             this.Apellido,
             this.dni,
             this.hclinica});
+            this.dgvPacientes.GridColor = System.Drawing.Color.NavajoWhite;
             this.dgvPacientes.Location = new System.Drawing.Point(24, 150);
+            this.dgvPacientes.MultiSelect = false;
             this.dgvPacientes.Name = "dgvPacientes";
+            this.dgvPacientes.ReadOnly = true;
             this.dgvPacientes.Size = new System.Drawing.Size(594, 150);
             this.dgvPacientes.TabIndex = 9;
             // 
@@ -94,24 +100,28 @@
             // 
             this.Nombre.HeaderText = "Nombre";
             this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
             this.Nombre.Width = 150;
             // 
             // Apellido
             // 
             this.Apellido.HeaderText = "Apellido";
             this.Apellido.Name = "Apellido";
+            this.Apellido.ReadOnly = true;
             this.Apellido.Width = 150;
             // 
             // dni
             // 
             this.dni.HeaderText = "DNI";
             this.dni.Name = "dni";
+            this.dni.ReadOnly = true;
             this.dni.Width = 150;
             // 
             // hclinica
             // 
             this.hclinica.HeaderText = "Historia Clinica";
             this.hclinica.Name = "hclinica";
+            this.hclinica.ReadOnly = true;
             // 
             // txtNombre
             // 

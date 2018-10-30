@@ -54,9 +54,14 @@ namespace ProyectoPav
 
         private void cmdDetalle_Click(object sender, EventArgs e)
         {
-            string id_paciente = dgvPacientes.CurrentRow.Cells[3].Value.ToString();
-            frmAtencion1 form = new frmAtencion1(id_paciente);
-            form.ShowDialog();
+            if (dgvPacientes.Rows.Count != 0)
+            {
+                string id_paciente = dgvPacientes.CurrentRow.Cells[3].Value.ToString();
+                frmAtencion1 form = new frmAtencion1(id_paciente);
+                form.ShowDialog();
+            }
+            else
+                MessageBox.Show("Debe seleccionar un paciente", "Error de paciente", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void cmdSalir_Click(object sender, EventArgs e)

@@ -82,18 +82,20 @@ namespace ProyectoPav
             paciente = new clsPaciente();
             paciente.nombre = txtNombre.Text;
             paciente.apellido = txtApellido.Text;
-            paciente.dni = int.Parse(txtDNI.Text);
-            paciente.telefono = int.Parse(txtTelefono.Text);
-            paciente.nacimiento = dtpNacimiento.Text;
+            paciente.dni = long.Parse(txtDNI.Text);
+            paciente.telefono = long.Parse(txtTelefono.Text);
+            paciente.nacimiento = dtpNacimiento.Value.ToString("yyyyMMdd");
             paciente.obra_Social = int.Parse(cboObraSocial.SelectedValue.ToString());
-            paciente.nro_Afiliado = int.Parse(txtNumeroDeSocio.Text);
+            paciente.nro_Afiliado = long.Parse(txtNumeroDeSocio.Text);
             paciente.domicilio = txtDomicilio.Text;
 
             oDatos.conectarTransaccion();
 
-            pacienteHelper.agregarPaciente(paciente);
+            pacienteHelper.agregarPaciente(paciente, oDatos);
+
             string sql2 = "declare @hc int set @hc = IDENT_CURRENT ('Pacientes')"
             + " insert into Historias_Clinicas (cod, id_paciente) values (@hc," + paciente.dni.ToString() + ")";
+
             oDatos.ejecutarTransaccion(sql2);
             oDatos.desconectar();
 
@@ -139,7 +141,6 @@ namespace ProyectoPav
             newp = false;
             modp = false;
             delp = false;
-
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

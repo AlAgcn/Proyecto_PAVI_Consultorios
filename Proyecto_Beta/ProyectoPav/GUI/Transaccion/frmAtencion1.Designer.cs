@@ -39,8 +39,6 @@
             this.rtbDiagnostico = new System.Windows.Forms.RichTextBox();
             this.rtbDiagnosticoAns = new System.Windows.Forms.RichTextBox();
             this.tbpPlan = new System.Windows.Forms.TabPage();
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.lblLista = new System.Windows.Forms.Label();
             this.lblDieta = new System.Windows.Forms.Label();
@@ -83,10 +81,10 @@
             this.tbcAtencion.Controls.Add(this.tbpPlan);
             this.tbcAtencion.Controls.Add(this.tbpObservacion);
             this.tbcAtencion.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tbcAtencion.Location = new System.Drawing.Point(0, 117);
+            this.tbcAtencion.Location = new System.Drawing.Point(0, 139);
             this.tbcAtencion.Name = "tbcAtencion";
             this.tbcAtencion.SelectedIndex = 0;
-            this.tbcAtencion.Size = new System.Drawing.Size(672, 292);
+            this.tbcAtencion.Size = new System.Drawing.Size(672, 270);
             this.tbcAtencion.TabIndex = 0;
             // 
             // tbpMotivo
@@ -99,7 +97,7 @@
             this.tbpMotivo.Padding = new System.Windows.Forms.Padding(3);
             this.tbpMotivo.Size = new System.Drawing.Size(664, 266);
             this.tbpMotivo.TabIndex = 0;
-            this.tbpMotivo.Text = "Motivo";
+            this.tbpMotivo.Text = "Motivo*";
             this.tbpMotivo.UseVisualStyleBackColor = true;
             // 
             // rtbMotivo
@@ -159,7 +157,7 @@
             this.tbpDiagnostico.Padding = new System.Windows.Forms.Padding(3);
             this.tbpDiagnostico.Size = new System.Drawing.Size(664, 266);
             this.tbpDiagnostico.TabIndex = 2;
-            this.tbpDiagnostico.Text = "Diagnostico";
+            this.tbpDiagnostico.Text = "Diagnostico*";
             this.tbpDiagnostico.UseVisualStyleBackColor = true;
             // 
             // rtbDiagnostico
@@ -182,8 +180,6 @@
             // 
             // tbpPlan
             // 
-            this.tbpPlan.Controls.Add(this.btnGuardar);
-            this.tbpPlan.Controls.Add(this.btnCancelar);
             this.tbpPlan.Controls.Add(this.btnAgregar);
             this.tbpPlan.Controls.Add(this.lblLista);
             this.tbpPlan.Controls.Add(this.lblDieta);
@@ -197,32 +193,14 @@
             this.tbpPlan.Location = new System.Drawing.Point(4, 22);
             this.tbpPlan.Name = "tbpPlan";
             this.tbpPlan.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpPlan.Size = new System.Drawing.Size(664, 266);
+            this.tbpPlan.Size = new System.Drawing.Size(664, 244);
             this.tbpPlan.TabIndex = 3;
-            this.tbpPlan.Text = "Plan Terapeutico";
+            this.tbpPlan.Text = "Plan Terapeutico*";
             this.tbpPlan.UseVisualStyleBackColor = true;
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Location = new System.Drawing.Point(602, 113);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(62, 28);
-            this.btnGuardar.TabIndex = 11;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Location = new System.Drawing.Point(602, 165);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(62, 28);
-            this.btnCancelar.TabIndex = 10;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(513, 49);
+            this.btnAgregar.Location = new System.Drawing.Point(519, 25);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(75, 23);
             this.btnAgregar.TabIndex = 12;
@@ -233,7 +211,7 @@
             // lblLista
             // 
             this.lblLista.AutoSize = true;
-            this.lblLista.Location = new System.Drawing.Point(0, 90);
+            this.lblLista.Location = new System.Drawing.Point(9, 62);
             this.lblLista.Name = "lblLista";
             this.lblLista.Size = new System.Drawing.Size(128, 13);
             this.lblLista.TabIndex = 8;
@@ -242,7 +220,7 @@
             // lblDieta
             // 
             this.lblDieta.AutoSize = true;
-            this.lblDieta.Location = new System.Drawing.Point(3, 36);
+            this.lblDieta.Location = new System.Drawing.Point(9, 12);
             this.lblDieta.Name = "lblDieta";
             this.lblDieta.Size = new System.Drawing.Size(32, 13);
             this.lblDieta.TabIndex = 7;
@@ -251,7 +229,7 @@
             // lblFrecuencia
             // 
             this.lblFrecuencia.AutoSize = true;
-            this.lblFrecuencia.Location = new System.Drawing.Point(143, 49);
+            this.lblFrecuencia.Location = new System.Drawing.Point(149, 25);
             this.lblFrecuencia.Name = "lblFrecuencia";
             this.lblFrecuencia.Size = new System.Drawing.Size(60, 13);
             this.lblFrecuencia.TabIndex = 6;
@@ -260,7 +238,7 @@
             // lblDuracion
             // 
             this.lblDuracion.AutoSize = true;
-            this.lblDuracion.Location = new System.Drawing.Point(339, 49);
+            this.lblDuracion.Location = new System.Drawing.Point(345, 25);
             this.lblDuracion.Name = "lblDuracion";
             this.lblDuracion.Size = new System.Drawing.Size(50, 13);
             this.lblDuracion.TabIndex = 5;
@@ -268,14 +246,14 @@
             // 
             // txtDuracion
             // 
-            this.txtDuracion.Location = new System.Drawing.Point(395, 49);
+            this.txtDuracion.Location = new System.Drawing.Point(401, 25);
             this.txtDuracion.Name = "txtDuracion";
             this.txtDuracion.Size = new System.Drawing.Size(100, 20);
             this.txtDuracion.TabIndex = 4;
             // 
             // txtFrecuencia
             // 
-            this.txtFrecuencia.Location = new System.Drawing.Point(209, 49);
+            this.txtFrecuencia.Location = new System.Drawing.Point(215, 25);
             this.txtFrecuencia.Name = "txtFrecuencia";
             this.txtFrecuencia.Size = new System.Drawing.Size(100, 20);
             this.txtFrecuencia.TabIndex = 3;
@@ -283,21 +261,23 @@
             // lstMedicamentos
             // 
             this.lstMedicamentos.FormattingEnabled = true;
-            this.lstMedicamentos.Location = new System.Drawing.Point(3, 116);
+            this.lstMedicamentos.Location = new System.Drawing.Point(11, 78);
             this.lstMedicamentos.Name = "lstMedicamentos";
-            this.lstMedicamentos.Size = new System.Drawing.Size(125, 147);
+            this.lstMedicamentos.Size = new System.Drawing.Size(125, 160);
             this.lstMedicamentos.TabIndex = 2;
             // 
             // cboDietas
             // 
             this.cboDietas.FormattingEnabled = true;
-            this.cboDietas.Location = new System.Drawing.Point(3, 52);
+            this.cboDietas.Location = new System.Drawing.Point(9, 28);
             this.cboDietas.Name = "cboDietas";
             this.cboDietas.Size = new System.Drawing.Size(120, 21);
             this.cboDietas.TabIndex = 1;
             // 
             // dgvMedicamentos
             // 
+            this.dgvMedicamentos.AllowUserToAddRows = false;
+            this.dgvMedicamentos.BackgroundColor = System.Drawing.Color.PeachPuff;
             this.dgvMedicamentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMedicamentos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id_medicamento,
@@ -306,9 +286,9 @@
             this.frecuencia,
             this.duracion,
             this.laboratorio});
-            this.dgvMedicamentos.Location = new System.Drawing.Point(154, 116);
+            this.dgvMedicamentos.Location = new System.Drawing.Point(154, 72);
             this.dgvMedicamentos.Name = "dgvMedicamentos";
-            this.dgvMedicamentos.Size = new System.Drawing.Size(442, 150);
+            this.dgvMedicamentos.Size = new System.Drawing.Size(502, 164);
             this.dgvMedicamentos.TabIndex = 0;
             // 
             // id_medicamento
@@ -468,8 +448,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn frecuencia;
         private System.Windows.Forms.DataGridViewTextBoxColumn duracion;
         private System.Windows.Forms.DataGridViewTextBoxColumn laboratorio;
-        private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Label lblLista;
         private System.Windows.Forms.Label lblDieta;

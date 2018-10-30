@@ -11,11 +11,11 @@ namespace ProyectoPav
         public int historiaClinica { set; get; }
         public string nombre { set; get; }
         public string apellido { set; get; }
-        public int dni { set; get; }
+        public long dni { set; get; }
         public string domicilio { set; get; }
         public int obra_Social { set; get; }
-        public int nro_Afiliado { set; get; }
-        public int telefono { set; get; }
+        public long nro_Afiliado { set; get; }
+        public long telefono { set; get; }
         public String nacimiento { set; get; }
 
         public clsPaciente(int hclinica, string nom, string apell, int DNI, string dom, int osocial, int nroafiliado, int tel, string nac)

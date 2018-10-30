@@ -44,7 +44,6 @@ D:\Proyecto_Git\Proyecto_PAVI_Consultorios\Proyecto_Beta\ProyectoPav\obj\Debug\P
 D:\Proyecto_Git\Proyecto_PAVI_Consultorios\Proyecto_Beta\ProyectoPav\obj\Debug\ProyectoPav.Properties.Resources.resources
 D:\Proyecto_Git\Proyecto_PAVI_Consultorios\Proyecto_Beta\ProyectoPav\obj\Debug\ProyectoPav.csproj.GenerateResource.Cache
 D:\Proyecto_Git\Proyecto_PAVI_Consultorios\Proyecto_Beta\ProyectoPav\obj\Debug\ProyectoPav.frmElegirPaciente.resources
-D:\Proyecto_Git\Proyecto_PAVI_Consultorios\Proyecto_Beta\ProyectoPav\obj\Debug\ProyectoPav.frmAtencion.resources
 D:\Proyecto_Git\Proyecto_PAVI_Consultorios\Proyecto_Beta\ProyectoPav\obj\Debug\ProyectoPav.frmPaciente.resources
 D:\Usuario\Escritorio\Cosas Raras\Progrmacionn\basura\Proyecto_PAVI_Consultorios-master\Proyecto_Beta\ProyectoPav\bin\Debug\ProyectoPav.exe.config
 D:\Usuario\Escritorio\Cosas Raras\Progrmacionn\basura\Proyecto_PAVI_Consultorios-master\Proyecto_Beta\ProyectoPav\obj\Debug\ProyectoPav.exe
@@ -131,3 +130,4 @@ G:\Proyecto_Beta\ProyectoPav\obj\Debug\ProyectoPav.frmPrincipal.resources
 G:\Proyecto_Beta\ProyectoPav\obj\Debug\ProyectoPav.frmUsuarios.resources
 G:\Proyecto_Beta\ProyectoPav\obj\Debug\ProyectoPav.Properties.Resources.resources
 G:\Proyecto_Beta\ProyectoPav\obj\Debug\ProyectoPav.csproj.GenerateResource.Cache
+D:\Proyecto_Git\Proyecto_PAVI_Consultorios\Proyecto_Beta\ProyectoPav\obj\Debug\ProyectoPav.frmAtencion1.resources
