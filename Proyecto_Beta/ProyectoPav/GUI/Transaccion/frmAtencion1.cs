@@ -26,11 +26,11 @@ namespace ProyectoPav
 
         private void btnGuardarTodo_Click(object sender, EventArgs e)
         {
-            if (String.IsNullOrEmpty(rtbMotivo.Text) || String.IsNullOrEmpty(rtbDiagnostico.Text) || dgvMedicamentos.Rows.Count == 0)
-                MessageBox.Show("No se completaron todos los campos obligatorios", "Error de atencion", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            else
-                guardarTransaccion();
-        }
+           if (String.IsNullOrEmpty(rtbMotivo.Text) || String.IsNullOrEmpty(rtbDiagnostico.Text) || dgvMedicamentos.Rows.Count == 0)
+               MessageBox.Show("No se completaron todos los campos obligatorios", "Error de atencion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+           else
+               guardarTransaccion();
+       }
 
         private void frmAtencion1_Load(object sender, EventArgs e)
         {
@@ -47,34 +47,38 @@ namespace ProyectoPav
         }
 
 
-        private void guardarTransaccion()
-        {
-            string sql1 = "Insert into Plan_Trp (id_dieta) values (" + cboDietas.SelectedValue.ToString() + ")";
-            string id_plan = "select IDENT_CURRENT ('Plan_Trp')";
+       private void guardarTransaccion()
+       {
+           List<string> transaccion = new List<string>();
 
-            datos.conectarTransaccion();
+           string sql1 = "Insert into Plan_Trp (id_dieta) values (" + cboDietas.SelectedValue.ToString() + ")";
 
-            datos.ejecutarTransaccion(sql1);
+           string sql2 = " declare @idtrp int set @idtrp = IDENT_CURRENT ('Plan_Trp') "
+           + "insert into Atenciones_Medicas (id_hc, motivo_consulta, diagnostico, id_planTrp) values ("
+           + paciente.historiaClinica + ", '" + rtbMotivo.Text + "', '" + rtbDiagnostico.Text + "',@idtrp)";
 
-            DataTable tabla = datos.consultaTabla_parametros(id_plan);
-            int plan_id = int.Parse(tabla.Rows[0][0].ToString());
-
-            string sql2 = " insert into Atenciones_Medicas (id_hc, motivo_consulta, diagnostico, id_planTrp) values ("
-           + paciente.historiaClinica + ", '" + rtbMotivo.Text + "', '" + rtbDiagnostico.Text + "'," + plan_id.ToString() + ")";
-
-            datos.ejecutarTransaccion(sql2);
+          transaccion.Add(sql1);
+          transaccion.Add(sql2);
 
             for (int i = 0; i < dgvMedicamentos.Rows.Count; i++)
-            {
-                string sqln = "Insert into Detalle_Medicamento (id_medicamento, frecuencia, duracion, id_plan) values "
-                            + "(" + int.Parse(dgvMedicamentos.Rows[i].Cells[0].Value.ToString()) + ", '"
-                            + dgvMedicamentos.Rows[i].Cells[3].Value.ToString() + "', '"
-                            + dgvMedicamentos.Rows[i].Cells[4].Value.ToString() + "'," + plan_id.ToString() + ")";
-                datos.ejecutarTransaccion(sqln);
-            }
+           {
+               string sqln = "declare @idtrp int set @idtrp = IDENT_CURRENT ('Plan_Trp')"
+                + "Insert into Detalle_Medicamento (id_medicamento, frecuencia, duracion, id_plan) values "
+                      + "(" + int.Parse(dgvMedicamentos.Rows[i].Cells[0].Value.ToString()) + ", '"
+                      + dgvMedicamentos.Rows[i].Cells[3].Value.ToString() + "', '"
+                      + dgvMedicamentos.Rows[i].Cells[4].Value.ToString() + "',@idtrp)";
+
+             transaccion.Add(sqln);
+          }
+        
+            datos.conectarTransaccion();
+
+            datos.ejecutarTransaccion(transaccion);
 
             datos.desconectar();
-        }
+
+
+       }
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             int id_med = int.Parse(lstMedicamentos.SelectedValue.ToString());

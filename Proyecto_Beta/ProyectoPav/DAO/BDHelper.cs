@@ -33,7 +33,7 @@ namespace ProyectoPav
 
         public BDHelper()
         {
-            cadConexion = @"Data Source=(localdb)\MiBase;Initial Catalog=MyFirst;Integrated Security=True";
+            cadConexion = @"Data Source=maquis;Initial Catalog=3;User ID=avisuales1;password=avisuales1";
             conexion = new SqlConnection();
             comando = new SqlCommand();
         }
@@ -105,13 +105,17 @@ namespace ProyectoPav
                 return false;
         }
 
-        public void ejecutarTransaccion(string sql_command)
+        public void ejecutarTransaccion(List<string> sql_trans)
         {
             try
             {
                 comando.CommandType = CommandType.Text;
-                comando.CommandText = sql_command;
-                comando.ExecuteNonQuery();
+                foreach (string sql in sql_trans)
+                {
+                    comando.CommandText = sql;
+                    comando.ExecuteNonQuery();
+                }
+                
             }
             catch (Exception)
             {

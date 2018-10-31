@@ -64,7 +64,14 @@ namespace ProyectoPav
             string str_sql = "INSERT INTO Pacientes (Nombre,Apellido,dni,Fecha_Nacimiento,id_obrasocial,n_Afiliado,Domicilio,Telefono,Estado) values ";
             str_sql+="('"+paci.nombre+"','"+paci.apellido+"',"+paci.dni.ToString()+",'"+paci.nacimiento.ToString()+"','"+paci.obra_Social;
             str_sql += "'," + paci.nro_Afiliado.ToString() + ",'" + paci.domicilio + "'," + paci.telefono.ToString()+",'S')";
-            conexionAbierta.ejecutarTransaccion(str_sql);
+
+            string s1l = crearHC(paci.dni.ToString());
+            List<string> trans;
+            trans = new List<string>();
+            trans.Add(str_sql);
+            trans.Add(s1l);
+
+            conexionAbierta.ejecutarTransaccion(trans);
 
         }
         public bool actualizarPaciente(clsPaciente paci)
@@ -86,6 +93,14 @@ namespace ProyectoPav
         {
             string str_sql = "UPDATE Pacientes SET Estado='N' WHERE Nombre='" + nombre + "' AND Apellido='" + apellido + "'";
             return (helper.consultaSQL(str_sql) == 1);
+        }
+
+        private string crearHC(string dni)
+        {
+            string sql2 = "declare @hc int set @hc = IDENT_CURRENT ('Pacientes')"
+            + " insert into Historias_Clinicas (cod, id_paciente) values (@hc," + dni + ")";
+
+            return sql2;
         }
     }
 }

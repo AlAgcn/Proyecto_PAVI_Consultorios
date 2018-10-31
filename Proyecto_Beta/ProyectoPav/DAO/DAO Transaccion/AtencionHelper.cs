@@ -25,7 +25,7 @@ namespace ProyectoPav
         {
             return map_Atencio(new BDHelper().consultaTabla_parametros("SELECT * FROM Atenciones_Medicas WHERE Historia_Clinica=" + hc.ToString() +"AND Fecha='"+fecha+"'").Rows[0]);
         }
-        public Boolean agregarAencion(clsAtencionMedica atencioncin)
+        public bool agregarAtencion(clsAtencionMedica atencioncin)
         {
             return (new BDHelper().consultaSQL("INSERT INTO Atenciones_Medicas (Historia_Clinica,Motivo_Consulta,Revision,Diagnostico,Plan_Terapeutico,Observaciones,fecha) VALUES ("+atencioncin.id_HistorialClinico.ToString()+",'"+atencioncin.Motivo_Consulta+"','"+atencioncin.Revision+"','"+atencioncin.Diagnostico+"','"+atencioncin.Plan_Terapeutico+"','"+atencioncin.Observaciones+"','"+atencioncin.Fecha+"')")==1);
         }

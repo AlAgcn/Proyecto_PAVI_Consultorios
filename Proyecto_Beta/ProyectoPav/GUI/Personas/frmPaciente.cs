@@ -93,10 +93,6 @@ namespace ProyectoPav
 
             pacienteHelper.agregarPaciente(paciente, oDatos);
 
-            string sql2 = "declare @hc int set @hc = IDENT_CURRENT ('Pacientes')"
-            + " insert into Historias_Clinicas (cod, id_paciente) values (@hc," + paciente.dni.ToString() + ")";
-
-            oDatos.ejecutarTransaccion(sql2);
             oDatos.desconectar();
 
                 //MessageBox.Show("Paciente Agredado", "Añadir Paciente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
