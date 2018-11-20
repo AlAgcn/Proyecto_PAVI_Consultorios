@@ -16,7 +16,6 @@ namespace ProyectoPav
         enum EstadoTransaccion
         { exito, fracaso}
 
-        private static BDHelper instance;
         private string cadConexion;
         private SqlConnection conexion;
         private SqlCommand comando;
@@ -33,7 +32,7 @@ namespace ProyectoPav
 
         public BDHelper()
         {
-            cadConexion = @"Data Source=maquis;Initial Catalog=3;User ID=avisuales1;password=avisuales1";
+            cadConexion = @"Data Source=alibook\Miservidor;Initial Catalog=Consultorio;Integrated Security=True";
             conexion = new SqlConnection();
             comando = new SqlCommand();
         }
@@ -98,6 +97,17 @@ namespace ProyectoPav
             DataTable existe = new DataTable();
             conectar();
             comando.CommandText = "SELECT " + columna + " FROM " + nombreTabla + " WHERE " + columna + "='" + nuevo + "'";
+            existe.Load(comando.ExecuteReader());
+            if (existe.Rows.Count > 0)
+                return true;
+            else
+                return false;
+        }
+        public bool siExisteCodigo(string nombreTabla, string columna, string nuevo)
+        {
+            DataTable existe = new DataTable();
+            conectar();
+            comando.CommandText = "SELECT " + columna + " FROM " + nombreTabla + " WHERE " + columna + "=" + nuevo ;
             existe.Load(comando.ExecuteReader());
             if (existe.Rows.Count > 0)
                 return true;

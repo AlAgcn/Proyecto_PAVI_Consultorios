@@ -15,7 +15,6 @@ namespace ProyectoPav
         MedicamentoHelper medhelp = new MedicamentoHelper();
         Boolean nv;
         Boolean md;
-        Boolean rm;
         public frmMedicamentos()
         {
             InitializeComponent();
@@ -24,6 +23,7 @@ namespace ProyectoPav
         private void frmMedicamentos_Load(object sender, EventArgs e)
         {
             deshabilitarBotones();
+            new FunctionHelper().cargarListaSinEstado(lstMedicamentos, "Medicamentos", "id", "farmaco");
         }
 
         private void deshabilitarBotones()
@@ -33,6 +33,9 @@ namespace ProyectoPav
             txtFarmaco.Enabled = false;
             btnCancelar.Enabled = false;
             btnGuardar.Enabled = false;
+            txtMonodroga.ResetText();
+            txtFarmaco.ResetText();
+            txtLaboratorio.ResetText();
         }
 
         private void habilitarBotones()
@@ -44,25 +47,18 @@ namespace ProyectoPav
             btnGuardar.Enabled = true;
         }
 
-        private void btnBuscar_Click(object sender, EventArgs e)
-        {
-            txtFarmaco.Text = new BDHelper().consultaTabla_parametros("Select monodroga from Medicamentos where id=" + txtId.Text).Rows[0][0].ToString();
-        }
-
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             habilitarBotones();
             nv = true;
+            btnModificar.Enabled = false;
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
             md = true;
-        }
-
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            rm = true;
+            habilitarBotones();
+            btnNuevo.Enabled = false;
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -75,21 +71,31 @@ namespace ProyectoPav
             }
             if (md)
                 {
-                    new BDHelper().consultaSQL("UPDATE Medicamentos SET monodroga='" + txtMedicamento.Text + "',farmaco='" + txtFarmaco.Text + "',laboratorio='" + txtLaboratorio.Text + "' WHERE id=" + txtId.Text);
+                    new BDHelper().consultaSQL("UPDATE Medicamentos SET monodroga='" + txtMonodroga.Text + "',farmaco='" + txtFarmaco.Text + "',laboratorio='" + txtLaboratorio.Text + "' WHERE id=" + lstMedicamentos.SelectedValue.ToString());
 
                 }
+
             nv = false;
             md = false;
-            txtId.ResetText();
+            btnNuevo.Enabled = true;
+            btnModificar.Enabled = true;
             txtFarmaco.ResetText();
-            txtLaboratorio.ResetText();
-            txtMedicamento.ResetText();
             deshabilitarBotones();
+            new FunctionHelper().cargarListaSinEstado(lstMedicamentos, "Medicamentos", "id", "farmaco");
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            deshabilitarBotones();
+            btnNuevo.Enabled = true;
+            btnModificar.Enabled = true;
+            nv = false;
+            md = false;
         }
 
         

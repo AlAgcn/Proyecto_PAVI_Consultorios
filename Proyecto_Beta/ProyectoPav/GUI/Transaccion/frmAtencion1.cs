@@ -34,11 +34,19 @@ namespace ProyectoPav
 
         private void frmAtencion1_Load(object sender, EventArgs e)
         {
+
             funciones.cargarListaSinEstado(lstMedicamentos, "Medicamentos", "id", "farmaco");
             funciones.llenarCombo(cboDietas, "Dietas", "n_dieta", "id");
             paciente = new PacienteHelper().getByHistory(int.Parse(id_pac));
             lblNombre.Text = "Nombre y Apellido: " + paciente.nombre+ " " +paciente.apellido;
             lblHistoriaClinica.Text = "Nª de Historia Clinica: " + paciente.historiaClinica.ToString();
+            // TODO: esta línea de código carga datos en la tabla '_3DataSet.Atenciones_Medicas' Puede moverla o quitarla según sea necesario.
+            this.Atenciones_MedicasTableAdapter.Fill(this._3DataSet.Atenciones_Medicas);
+            Atenciones_MedicasBindingSource.DataSource = datos.consultaTabla_parametros("SELECT * FROM Atenciones_Medicas WHERE id_HC="+ id_pac);
+            this.rptMotivos.RefreshReport();
+            this.rptDiagnostico.RefreshReport();
+            this.rptObservacion.RefreshReport();
+            this.rptRevision.RefreshReport();
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -84,6 +92,11 @@ namespace ProyectoPav
             int id_med = int.Parse(lstMedicamentos.SelectedValue.ToString());
             medicine = new MedicamentoHelper().getByID(id_med);
             dgvMedicamentos.Rows.Add(id_med, medicine.Monodroga, medicine.Farmaco, txtFrecuencia.Text, txtDuracion.Text, medicine.Laboratorio);
+        }
+
+        private void lblHistoriaClinica_Click(object sender, EventArgs e)
+        {
+
         }
 
     }

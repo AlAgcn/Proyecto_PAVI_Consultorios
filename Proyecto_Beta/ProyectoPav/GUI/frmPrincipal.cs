@@ -50,14 +50,26 @@ namespace ProyectoPav
 
         private void btnConsultas_Click(object sender, EventArgs e)
         {
-            frmElegirPaciente formi = new frmElegirPaciente();
-            formi.ShowDialog();
+            frmElegirPaciente formis = new frmElegirPaciente();
+            formis.ShowDialog();
         }
 
         private void btnMedicamentos_Click(object sender, EventArgs e)
         {
             frmMedicamentos frm = new frmMedicamentos();
             frm.ShowDialog();
+        }
+
+        private void btnHistoriaClinica_Click(object sender, EventArgs e)
+        {
+            frmRepoHistorias formi = new frmRepoHistorias();
+            formi.ShowDialog();
+        }
+
+        private void btnGraficos_Click(object sender, EventArgs e)
+        {
+            frmIngresarAnio  opne = new frmIngresarAnio();
+            opne.ShowDialog();
         }
 
 

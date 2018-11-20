@@ -69,5 +69,10 @@ namespace ProyectoPav
             this.Close();
         }
 
+        private void btnElegirP_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

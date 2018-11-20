@@ -97,6 +97,7 @@ namespace ProyectoPav
             habilitarCampos();
             btnModificar.Enabled = false;
             btnNuevo.Enabled = false;
+            btnEliminar.Enabled = true;
             delm = true;
         }
 
@@ -114,7 +115,7 @@ namespace ProyectoPav
             {
                 modificarMedico();
             }
-            else
+            if(delm)
                 eliminarMedico();
 
             deshabilitarCampos();
@@ -123,11 +124,10 @@ namespace ProyectoPav
             btnEliminar.Enabled = true;
             newm = false;
             modm = false;
-            delm = false;
             txtNombre.ResetText();
             txtApellido.ResetText();
             dtpFecha.ResetText();
-            funciones.cargarLista(lstMedicos, "Medicos", "id", "Apellido");
+            cargarlista(lstMedicos, "Apellido", "id");
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -144,6 +144,13 @@ namespace ProyectoPav
         private void btnSalir_Click(object sender, EventArgs e)
         {
             Close();
+        }
+        private void cargarlista(ListBox lst,string display,string member)
+        {
+            string str = "SELECT * FROM Medicos WHERE Estado='S'";
+            lst.DataSource = new BDHelper().consultaTabla_parametros(str);
+            lst.DisplayMember = display;
+            lst.ValueMember = member;
         }
     }
 }

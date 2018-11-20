@@ -34,6 +34,7 @@
             this.btnAtencion = new System.Windows.Forms.Button();
             this.btnMedicos = new System.Windows.Forms.Button();
             this.btnMedicamentos = new System.Windows.Forms.Button();
+            this.btnGraficos = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnPacientes
@@ -58,6 +59,7 @@
             this.btnHistoriaClinica.TabIndex = 4;
             this.btnHistoriaClinica.Text = "Historias Clinicas";
             this.btnHistoriaClinica.UseVisualStyleBackColor = false;
+            this.btnHistoriaClinica.Click += new System.EventHandler(this.btnHistoriaClinica_Click);
             // 
             // btnUsuario
             // 
@@ -108,11 +110,24 @@
             this.btnMedicamentos.UseVisualStyleBackColor = false;
             this.btnMedicamentos.Click += new System.EventHandler(this.btnMedicamentos_Click);
             // 
+            // btnGraficos
+            // 
+            this.btnGraficos.BackColor = System.Drawing.SystemColors.Info;
+            this.btnGraficos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGraficos.Location = new System.Drawing.Point(252, 315);
+            this.btnGraficos.Name = "btnGraficos";
+            this.btnGraficos.Size = new System.Drawing.Size(387, 58);
+            this.btnGraficos.TabIndex = 6;
+            this.btnGraficos.Text = "Graficos";
+            this.btnGraficos.UseVisualStyleBackColor = false;
+            this.btnGraficos.Click += new System.EventHandler(this.btnGraficos_Click);
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(839, 336);
+            this.ClientSize = new System.Drawing.Size(869, 398);
+            this.Controls.Add(this.btnGraficos);
             this.Controls.Add(this.btnMedicamentos);
             this.Controls.Add(this.btnMedicos);
             this.Controls.Add(this.btnAtencion);
@@ -135,6 +150,7 @@
         private System.Windows.Forms.Button btnAtencion;
         private System.Windows.Forms.Button btnMedicos;
         private System.Windows.Forms.Button btnMedicamentos;
+        private System.Windows.Forms.Button btnGraficos;
 
     }
 }
